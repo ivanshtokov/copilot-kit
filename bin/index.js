@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const VERSION = '3.5.0';
+const VERSION = '3.6.0';
 const PACKAGE_NAME = '@shtokov/copilot-kit';
 
 // Parse CLI arguments
