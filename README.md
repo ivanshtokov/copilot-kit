@@ -2,7 +2,7 @@
 
 # ��� Copilot Kit
 
-> **Version 3.4.0** — Native GitHub Copilot Configuration Kit
+> **Version 3.5.0** — Native GitHub Copilot Configuration Kit
 
 [![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
