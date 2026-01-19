@@ -6,7 +6,7 @@
 
 
 
-> **Version 3.0.1** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit# ��� Copilot Kit
+> **Version 3.0.2** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit# ��� Copilot Kit
 
 
 

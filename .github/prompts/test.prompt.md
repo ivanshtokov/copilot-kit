@@ -1,7 +1,13 @@
 ---
 description: Generate and run comprehensive tests
 agent: agent
-tools: ['codebase', 'search', 'testFailures', 'runCommand']
+tools:
+  - codebase
+  - textSearch
+  - readFile
+  - editFiles
+  - createFile
+  - runInTerminal
 ---
 # Test
 

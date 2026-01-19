@@ -1,6 +1,6 @@
 {
   "name": "@shtokov/copilot-kit",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Native GitHub Copilot Configuration Kit - Custom Agents, Agent Skills, Instructions, and Prompt Files",
   "keywords": [
     "copilot",

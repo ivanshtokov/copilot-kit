@@ -1,7 +1,11 @@
 ---
 description: Generate an implementation plan for features or refactoring
 agent: ask
-tools: ['codebase', 'search', 'fetch', 'usages']
+tools:
+  - codebase
+  - textSearch
+  - fetch
+  - usages
 ---
 # Plan
 

@@ -1,7 +1,10 @@
 ---
 description: Explore options with Socratic questioning before implementation
 agent: ask
-tools: ['codebase', 'search', 'fetch']
+tools:
+  - codebase
+  - textSearch
+  - fetch
 ---
 # Brainstorm
 
