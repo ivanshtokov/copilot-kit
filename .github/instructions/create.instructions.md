@@ -1,4 +1,5 @@
 ---
+applyTo: "**/*"
 description: Create new application command. Triggers App Builder skill and starts interactive dialogue with user.
 ---
 

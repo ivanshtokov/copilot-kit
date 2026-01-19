@@ -53,24 +53,129 @@ You are the **Auto-Orchestrator** - an intelligent Meta-Agent that:
 - Add meaningful comments for complex logic
 - Follow the project's ESLint/Prettier configuration
 
-## 🧠 Domain Expertise
+## � Available Agents (16)
+
+| Agent | Domain | Use For |
+|-------|--------|---------|
+| `orchestrator` | Meta | Coordinate multi-agent tasks |
+| `frontend-specialist` | Frontend | React, Vue, CSS, UI/UX |
+| `backend-specialist` | Backend | API, Node.js, databases |
+| `database-architect` | Database | Schema design, migrations |
+| `test-engineer` | Testing | Unit, integration, E2E tests |
+| `security-auditor` | Security | Vulnerability scanning |
+| `penetration-tester` | Security | Red team tactics |
+| `devops-engineer` | DevOps | Docker, CI/CD, deployment |
+| `mobile-developer` | Mobile | React Native, Flutter |
+| `game-developer` | Games | Unity, Godot, Phaser |
+| `debugger` | Debug | Systematic debugging |
+| `performance-optimizer` | Performance | Profiling, optimization |
+| `project-planner` | Planning | Architecture, roadmaps |
+| `documentation-writer` | Docs | README, API docs |
+| `seo-specialist` | SEO | Search optimization |
+| `explorer-agent` | Discovery | Codebase exploration |
+
+## �🧠 Domain Expertise (40 Skills)
 
 Read the relevant skill file BEFORE working on domain-specific tasks:
 
-| Domain | Skill File |
-|--------|------------|
-| Frontend/UI | `.github/skills/frontend-design/SKILL.md` |
-| React | `.github/skills/react-patterns/SKILL.md` |
-| Tailwind | `.github/skills/tailwind-patterns/SKILL.md` |
-| Backend/API | `.github/skills/api-patterns/SKILL.md` |
-| Node.js | `.github/skills/nodejs-best-practices/SKILL.md` |
-| Database | `.github/skills/database-design/SKILL.md` |
-| Prisma | `.github/skills/prisma-expert/SKILL.md` |
-| Security | `.github/skills/vulnerability-scanner/SKILL.md` |
-| Testing | `.github/skills/testing-patterns/SKILL.md` |
-| Mobile | `.github/skills/mobile-design/SKILL.md` |
-| Docker | `.github/skills/docker-expert/SKILL.md` |
+### Frontend & UI
+| Skill | Path |
+|-------|------|
+| Frontend Design | `.github/skills/frontend-design/SKILL.md` |
+| React Patterns | `.github/skills/react-patterns/SKILL.md` |
+| Tailwind Patterns | `.github/skills/tailwind-patterns/SKILL.md` |
+| Next.js Best Practices | `.github/skills/nextjs-best-practices/SKILL.md` |
+| UI/UX Pro Max | `.github/skills/ui-ux-pro-max/SKILL.md` |
+
+### Backend & API
+| Skill | Path |
+|-------|------|
+| API Patterns | `.github/skills/api-patterns/SKILL.md` |
+| Node.js Best Practices | `.github/skills/nodejs-best-practices/SKILL.md` |
+| NestJS Expert | `.github/skills/nestjs-expert/SKILL.md` |
+| Python Patterns | `.github/skills/python-patterns/SKILL.md` |
+
+### Database
+| Skill | Path |
+|-------|------|
+| Database Design | `.github/skills/database-design/SKILL.md` |
+| Prisma Expert | `.github/skills/prisma-expert/SKILL.md` |
+
+### Security
+| Skill | Path |
+|-------|------|
+| Vulnerability Scanner | `.github/skills/vulnerability-scanner/SKILL.md` |
+| Red Team Tactics | `.github/skills/red-team-tactics/SKILL.md` |
+
+### Testing
+| Skill | Path |
+|-------|------|
+| Testing Patterns | `.github/skills/testing-patterns/SKILL.md` |
+| TDD Workflow | `.github/skills/tdd-workflow/SKILL.md` |
+| Webapp Testing | `.github/skills/webapp-testing/SKILL.md` |
+
+### Mobile
+| Skill | Path |
+|-------|------|
+| Mobile Design | `.github/skills/mobile-design/SKILL.md` |
+
+### DevOps
+| Skill | Path |
+|-------|------|
+| Docker Expert | `.github/skills/docker-expert/SKILL.md` |
+| Deployment Procedures | `.github/skills/deployment-procedures/SKILL.md` |
+
+### Architecture & Planning
+| Skill | Path |
+|-------|------|
 | Architecture | `.github/skills/architecture/SKILL.md` |
+| App Builder | `.github/skills/app-builder/SKILL.md` |
+| Plan Writing | `.github/skills/plan-writing/SKILL.md` |
+
+### Other
+| Skill | Path |
+|-------|------|
+| Clean Code | `.github/skills/clean-code/SKILL.md` |
+| TypeScript Expert | `.github/skills/typescript-expert/SKILL.md` |
+| Game Development | `.github/skills/game-development/SKILL.md` |
+| MCP Builder | `.github/skills/mcp-builder/SKILL.md` |
+| Bash/Linux | `.github/skills/bash-linux/SKILL.md` |
+| PowerShell/Windows | `.github/skills/powershell-windows/SKILL.md` |
+| SEO Fundamentals | `.github/skills/seo-fundamentals/SKILL.md` |
+| i18n Localization | `.github/skills/i18n-localization/SKILL.md` |
+
+## 📝 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `/create` | Create new application |
+| `/enhance` | Add features to existing app |
+| `/debug` | Systematic debugging |
+| `/test` | Generate and run tests |
+| `/deploy` | Production deployment |
+| `/plan` | Create project plan |
+| `/preview` | Manage preview server |
+| `/status` | Show project status |
+| `/brainstorm` | Structured idea exploration |
+| `/orchestrate` | Multi-agent coordination |
+
+## 📄 Auto-Apply Instructions
+
+These instructions automatically apply based on file type:
+
+| Pattern | Instruction File |
+|---------|-----------------|
+| `*.ts, *.tsx, *.js, *.jsx` | typescript.instructions.md |
+| `*.css, *.scss` | frontend.instructions.md |
+| `api/**, server/**` | backend.instructions.md |
+| `*.test.*, *.spec.*` | testing.instructions.md |
+| `*.py` | python.instructions.md |
+| `*.prisma, prisma/**` | prisma.instructions.md |
+| `Dockerfile*, docker-compose*` | docker.instructions.md |
+| `*.md, docs/**` | documentation.instructions.md |
+| `*.swift, *.kt, *.dart` | mobile.instructions.md |
+| `workflows/**` | devops.instructions.md |
+| `**/*` | security.instructions.md |
 
 ## 🚨 Anti-Patterns (NEVER DO)
 

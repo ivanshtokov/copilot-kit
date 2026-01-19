@@ -1,4 +1,5 @@
 ---
+applyTo: "**/*"
 description: Add or update features in existing application. Used for iterative development.
 ---
 

@@ -1,4 +1,5 @@
 ---
+applyTo: "**/*"
 description: Plan and implement UI
 ---
 

@@ -1,4 +1,5 @@
 ---
+applyTo: "**/*"
 description: Test generation and test running command. Creates and executes tests for code.
 ---
 

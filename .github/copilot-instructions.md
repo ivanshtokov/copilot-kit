@@ -187,3 +187,71 @@ For common patterns, act immediately:
 - `.github/modes/copilot-kit.chatmode.md` - Custom chat mode
 - `.github/instructions/*.instructions.md` - File-type specific rules
 - `.github/skills/` - Domain expertise (read when relevant)
+
+---
+
+## 📝 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `/create` | Create new application |
+| `/enhance` | Add features to existing app |
+| `/debug` | Systematic debugging |
+| `/test` | Generate and run tests |
+| `/deploy` | Production deployment |
+| `/plan` | Create project plan |
+| `/preview` | Manage preview server |
+| `/status` | Show project status |
+| `/brainstorm` | Structured idea exploration |
+| `/orchestrate` | Multi-agent coordination |
+
+---
+
+## 🤖 Available Agents (16)
+
+| Agent | Domain | Use For |
+|-------|--------|---------|
+| `orchestrator` | Meta | Coordinate multi-agent tasks |
+| `frontend-specialist` | Frontend | React, Vue, CSS, UI/UX |
+| `backend-specialist` | Backend | API, Node.js, databases |
+| `database-architect` | Database | Schema design, migrations |
+| `test-engineer` | Testing | Unit, integration, E2E tests |
+| `security-auditor` | Security | Vulnerability scanning |
+| `penetration-tester` | Security | Red team tactics |
+| `devops-engineer` | DevOps | Docker, CI/CD, deployment |
+| `mobile-developer` | Mobile | React Native, Flutter |
+| `game-developer` | Games | Unity, Godot, Phaser |
+| `debugger` | Debug | Systematic debugging |
+| `performance-optimizer` | Performance | Profiling, optimization |
+| `project-planner` | Planning | Architecture, roadmaps |
+| `documentation-writer` | Docs | README, API docs |
+| `seo-specialist` | SEO | Search optimization |
+| `explorer-agent` | Discovery | Codebase exploration |
+
+---
+
+## 📄 Auto-Apply Instructions (21 files)
+
+| Pattern | Instruction File |
+|---------|-----------------|
+| `*.ts, *.tsx, *.js, *.jsx` | typescript.instructions.md |
+| `*.css, *.scss, *.tsx, *.jsx` | frontend.instructions.md |
+| `api/**, server/**, routes/**` | backend.instructions.md |
+| `*.test.*, *.spec.*, __tests__/**` | testing.instructions.md |
+| `*.py` | python.instructions.md |
+| `*.prisma, prisma/**` | prisma.instructions.md |
+| `Dockerfile*, docker-compose*` | docker.instructions.md |
+| `*.md, docs/**` | documentation.instructions.md |
+| `*.swift, *.kt, *.dart` | mobile.instructions.md |
+| `workflows/**` | devops.instructions.md |
+| `**/*` | security.instructions.md |
+| `**/*` | brainstorm.instructions.md |
+| `**/*` | create.instructions.md |
+| `**/*` | debug.instructions.md |
+| `**/*` | deploy.instructions.md |
+| `**/*` | enhance.instructions.md |
+| `**/*` | orchestrate.instructions.md |
+| `**/*` | plan.instructions.md |
+| `**/*` | preview.instructions.md |
+| `**/*` | status.instructions.md |
+| `**/*` | test.instructions.md |
