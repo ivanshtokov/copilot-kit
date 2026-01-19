@@ -1,0 +1,42 @@
+{
+  "name": "@shtokov/copilot-kit",
+  "version": "2.0.0",
+  "description": "AI Agent templates - Custom Agents, Prompt Files, and Instructions for enhanced GitHub Copilot assistance",
+  "bin": {
+    "copilot-kit": "bin/index.js"
+  },
+  "files": [
+    "bin/",
+    ".github/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shtokov/copilot-kit.git"
+  },
+  "homepage": "https://github.com/shtokov/copilot-kit#readme",
+  "bugs": {
+    "url": "https://github.com/shtokov/copilot-kit/issues"
+  },
+  "keywords": [
+    "copilot",
+    "github-copilot",
+    "ai",
+    "agent",
+    "prompts",
+    "instructions",
+    "templates",
+    "vscode",
+    "ai-assistant",
+    "code-generation"
+  ],
+  "author": "shtokov",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
