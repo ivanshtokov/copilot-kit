@@ -174,4 +174,16 @@ For common patterns, act immediately:
 4. Work autonomously through the task
 5. PROVE your work with verification
 6. Suggest next steps when relevant
-- Check for security vulnerabilities in dependencies
+7. Check for security vulnerabilities in dependencies
+8. **READ SKILL FILES** before domain-specific work
+9. **NEVER skip the mandatory header format**
+10. **Match user's language** but code in English
+
+---
+
+## 📚 ALSO SEE
+
+- `AGENTS.md` in project root - Universal AI agent instructions
+- `.github/modes/copilot-kit.chatmode.md` - Custom chat mode
+- `.github/instructions/*.instructions.md` - File-type specific rules
+- `.github/skills/` - Domain expertise (read when relevant)
