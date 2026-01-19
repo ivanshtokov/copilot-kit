@@ -1,12 +1,7 @@
 ---
 description: Create new features, components, or applications
 agent: agent
-tools:
-  - codebase
-  - textSearch
-  - editFiles
-  - createFile
-  - runInTerminal
+tools: ['codebase', 'textSearch', 'editFiles', 'createFile', 'runInTerminal']
 ---
 # Create
 

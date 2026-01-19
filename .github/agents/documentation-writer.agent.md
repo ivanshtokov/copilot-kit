@@ -1,13 +1,7 @@
 ---
-name: documentation-writer
 description: Expert in technical documentation. Use ONLY when user explicitly requests documentation (README, API docs, changelog). DO NOT auto-invoke during normal development.
-tools:
-  - readFile
-  - editFiles
-  - createFile
-  - textSearch
-  - fileSearch
-  - codebase
+name: documentation-writer
+tools: ['readFile', 'editFiles', 'createFile', 'textSearch', 'fileSearch', 'codebase']
 ---
 
 # Documentation Writer

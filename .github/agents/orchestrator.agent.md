@@ -1,24 +1,36 @@
 ---
-name: orchestrator
 description: Multi-agent coordination and task orchestration. Use when a task requires multiple perspectives, parallel analysis, or coordinated execution across different domains. Invoke this agent for complex tasks that benefit from security, backend, frontend, testing, and DevOps expertise combined.
-tools:
-  - readFile
-  - editFiles
-  - createFile
-  - runInTerminal
-  - textSearch
-  - fileSearch
-  - codebase
-  - problems
-  - usages
+name: orchestrator
+tools: ['readFile', 'editFiles', 'createFile', 'runInTerminal', 'textSearch', 'fileSearch', 'codebase', 'problems', 'usages']
 handoffs:
-  - frontend-specialist
-  - backend-specialist
-  - security-auditor
-  - test-engineer
-  - devops-engineer
-  - database-architect
-  - mobile-developer
+  - label: Frontend Implementation
+    agent: frontend-specialist
+    prompt: Implement the frontend components outlined above.
+    send: false
+  - label: Backend Implementation  
+    agent: backend-specialist
+    prompt: Implement the backend services outlined above.
+    send: false
+  - label: Security Review
+    agent: security-auditor
+    prompt: Review the implementation for security issues.
+    send: false
+  - label: Write Tests
+    agent: test-engineer
+    prompt: Write tests for the implemented features.
+    send: false
+  - label: Deploy
+    agent: devops-engineer
+    prompt: Deploy the implementation to production.
+    send: false
+  - label: Database Changes
+    agent: database-architect
+    prompt: Implement the database schema changes.
+    send: false
+  - label: Mobile Implementation
+    agent: mobile-developer
+    prompt: Implement the mobile application features.
+    send: false
 ---
 
 # Orchestrator - Native Multi-Agent Coordination

@@ -1,47 +1,46 @@
 ---
 name: game-development
-description: Game development orchestrator. Routes to platform-specific skills based on project needs.
-allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+description: Game development orchestrator. Routes to platform-specific references based on project needs. Covers web, mobile, PC, VR/AR, 2D, 3D games, multiplayer networking, game design, art, and audio.
 ---
 
 # Game Development
 
-> **Orchestrator skill** that provides core principles and routes to specialized sub-skills.
+> **Orchestrator skill** that provides core principles and routes to specialized references.
 
 ---
 
 ## When to Use This Skill
 
-You are working on a game development project. This skill teaches the PRINCIPLES of game development and directs you to the right sub-skill based on context.
+You are working on a game development project. This skill teaches the PRINCIPLES of game development and directs you to the right reference based on context.
 
 ---
 
-## Sub-Skill Routing
+## Reference Files
 
-### Platform Selection
+### Platform-Specific
 
-| If the game targets... | Use Sub-Skill |
-|------------------------|---------------|
-| Web browsers (HTML5, WebGL) | `game-development/web-games` |
-| Mobile (iOS, Android) | `game-development/mobile-games` |
-| PC (Steam, Desktop) | `game-development/pc-games` |
-| VR/AR headsets | `game-development/vr-ar` |
+| If the game targets... | Load Reference |
+|------------------------|----------------|
+| Web browsers (HTML5, WebGL) | [web-games](./web-games/REFERENCE.md) |
+| Mobile (iOS, Android) | [mobile-games](./mobile-games/REFERENCE.md) |
+| PC (Steam, Desktop) | [pc-games](./pc-games/REFERENCE.md) |
+| VR/AR headsets | [vr-ar](./vr-ar/REFERENCE.md) |
 
-### Dimension Selection
+### Dimension-Specific
 
-| If the game is... | Use Sub-Skill |
-|-------------------|---------------|
-| 2D (sprites, tilemaps) | `game-development/2d-games` |
-| 3D (meshes, shaders) | `game-development/3d-games` |
+| If the game is... | Load Reference |
+|-------------------|----------------|
+| 2D (sprites, tilemaps) | [2d-games](./2d-games/REFERENCE.md) |
+| 3D (meshes, shaders) | [3d-games](./3d-games/REFERENCE.md) |
 
 ### Specialty Areas
 
-| If you need... | Use Sub-Skill |
-|----------------|---------------|
-| GDD, balancing, player psychology | `game-development/game-design` |
-| Multiplayer, networking | `game-development/multiplayer` |
-| Visual style, asset pipeline, animation | `game-development/game-art` |
-| Sound design, music, adaptive audio | `game-development/game-audio` |
+| If you need... | Load Reference |
+|----------------|----------------|
+| GDD, balancing, player psychology | [game-design](./game-design/REFERENCE.md) |
+| Multiplayer, networking | [multiplayer](./multiplayer/REFERENCE.md) |
+| Visual style, asset pipeline, animation | [game-art](./game-art/REFERENCE.md) |
+| Sound design, music, adaptive audio | [game-audio](./game-audio/REFERENCE.md) |
 
 ---
 
@@ -149,18 +148,18 @@ Abstract input into ACTIONS, not raw keys:
 ## Routing Examples
 
 ### Example 1: "I want to make a browser-based 2D platformer"
-→ Start with `game-development/web-games` for framework selection
-→ Then `game-development/2d-games` for sprite/tilemap patterns
-→ Reference `game-development/game-design` for level design
+→ Load [web-games](./web-games/REFERENCE.md) for framework selection
+→ Then [2d-games](./2d-games/REFERENCE.md) for sprite/tilemap patterns
+→ Reference [game-design](./game-design/REFERENCE.md) for level design
 
 ### Example 2: "Mobile puzzle game for iOS and Android"
-→ Start with `game-development/mobile-games` for touch input and stores
-→ Use `game-development/game-design` for puzzle balancing
+→ Load [mobile-games](./mobile-games/REFERENCE.md) for touch input and stores
+→ Use [game-design](./game-design/REFERENCE.md) for puzzle balancing
 
 ### Example 3: "Multiplayer VR shooter"
-→ `game-development/vr-ar` for comfort and immersion
-→ `game-development/3d-games` for rendering
-→ `game-development/multiplayer` for networking
+→ [vr-ar](./vr-ar/REFERENCE.md) for comfort and immersion
+→ [3d-games](./3d-games/REFERENCE.md) for rendering
+→ [multiplayer](./multiplayer/REFERENCE.md) for networking
 
 ---
 

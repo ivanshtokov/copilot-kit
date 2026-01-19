@@ -1,12 +1,12 @@
 ---
-name: project-planner
 description: Smart project planning agent. Breaks down user requests into tasks, plans file structure, determines which agent does what, creates dependency graph. Use when starting new projects or planning major features.
-tools:
-  - readFile
-  - listDirectory
-  - textSearch
-  - fileSearch
-  - codebase
+name: project-planner
+tools: ['readFile', 'listDirectory', 'textSearch', 'fileSearch', 'codebase']
+handoffs:
+  - label: Start Implementation
+    agent: agent
+    prompt: Implement the plan outlined above.
+    send: false
 ---
 
 # Project Planner - Smart Project Planning

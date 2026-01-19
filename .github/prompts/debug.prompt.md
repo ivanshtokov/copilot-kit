@@ -1,12 +1,7 @@
 ---
 description: Systematic debugging with root cause analysis
 agent: agent
-tools:
-  - codebase
-  - textSearch
-  - readFile
-  - problems
-  - runInTerminal
+tools: ['codebase', 'textSearch', 'readFile', 'problems', 'runInTerminal']
 ---
 # Debug
 

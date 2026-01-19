@@ -1,4 +1,4 @@
-<div align="center"><div align="center"><div align="center">
+<div align="center"><div align="center"><div align="center"><div align="center"><div align="center">
 
 
 
@@ -6,7 +6,7 @@
 
 
 
-> **Version 3.0.2** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit# ��� Copilot Kit
+> **Version 3.1.0** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit
 
 
 
@@ -14,7 +14,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)> **Version 3.0** — Native GitHub Copilot Configuration Kit> **Version 2.0** — AI Agent templates for GitHub Copilot
+[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)> **Version 3.1.0** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit
 
 
 
@@ -22,15 +22,15 @@
 
 
 
-</div>[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
+</div>[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
 
 
 
----[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+---[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
-## ⚡ Quick Start[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)
+## ⚡ Quick Start[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)> **Version 3.0.2** — Native GitHub Copilot Configuration Kit# 🤖 Copilot Kit# ��� Copilot Kit
 
 
 
@@ -38,7 +38,7 @@
 
 npx @shtokov/copilot-kit init
 
-```**[English](#-english)** | **[Русский](#-русский)****[English](#-english)** | **[Русский](#-русский)**
+```**[English](#-english)** | **[Русский](#-русский)**
 
 
 
@@ -46,7 +46,7 @@ Or install globally:
 
 
 
-```bash</div></div>
+```bash</div>[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
 
 npm install -g @shtokov/copilot-kit
 
@@ -54,7 +54,7 @@ copilot-kit init
 
 ```
 
-------
+---[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
@@ -62,7 +62,7 @@ copilot-kit init
 
 <a name="-english"></a>
 
-## ⚡ Quick Start## ⚡ Quick Start
+## ⚡ Quick Start[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)> **Version 3.0** — Native GitHub Copilot Configuration Kit> **Version 2.0** — AI Agent templates for GitHub Copilot
 
 ## 🇬🇧 English
 
@@ -70,183 +70,904 @@ copilot-kit init
 
 ### What is Copilot Kit?
 
-```bash```bash
+```bash
 
 **Copilot Kit** is a production-ready collection of configurations for [GitHub Copilot](https://github.com/features/copilot) using **native VS Code customization** standards (January 2026). It works immediately after installation with no additional setup required.
 
-npx @shtokov/copilot-kit initnpx @shtokov/copilot-kit init
+npx @shtokov/copilot-kit init
 
 ### ✨ Key Features
 
-``````
+```**[English](#-english)** | **[Русский](#-русский)**
 
-- ✅ **Native Copilot Integration** — Uses official VS Code customization formats
+| Feature | Count | Description |
 
-- ✅ **16 Custom Agents** — Specialized AI personas with `.agent.md` format
+|---------|-------|-------------|
 
-- ✅ **40 Agent Skills** — Domain-specific knowledge using `SKILL.md` standard
+| **Custom Agents** | 16 | Specialized AI personas (`.agent.md`) |
 
-- ✅ **11 Instructions** — Slash command templates with `.instructions.md` formatOr install globally:Or install globally:
+| **Agent Skills** | 40 | Domain knowledge libraries (`SKILL.md`) |Or install globally:
+
+| **Prompt Files** | 10 | Reusable slash commands (`.prompt.md`) |
+
+| **Instructions** | 11 | Behavioral guidelines (`.instructions.md`) |
+
+| **VS Code Settings** | ✓ | Pre-configured `.vscode/settings.json` |
+
+```bash</div>[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
+
+### 📦 Installation Structure
+
+npm install -g @shtokov/copilot-kit
+
+After running `copilot-kit init`, your project will have:
+
+copilot-kit init
+
+```
+
+your-project/```
+
+├── .github/
+
+│   ├── agents/              # 16 custom agents---[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+│   │   ├── orchestrator.agent.md
+
+│   │   ├── frontend-specialist.agent.md---
+
+│   │   ├── backend-specialist.agent.md
+
+│   │   ├── debugger.agent.md
+
+│   │   ├── test-engineer.agent.md
+
+│   │   ├── security-auditor.agent.md<a name="-english"></a>
+
+│   │   └── ... (10 more)
+
+│   │## ⚡ Quick Start[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)[![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)
+
+│   ├── skills/              # 40 agent skills
+
+│   │   ├── app-builder/## 🇬🇧 English
+
+│   │   ├── architecture/
+
+│   │   ├── react-patterns/
+
+│   │   ├── typescript-expert/
+
+│   │   └── ... (36 more)### What is Copilot Kit?
+
+│   │
+
+│   ├── prompts/             # 10 prompt files```bash
+
+│   │   ├── create.prompt.md
+
+│   │   ├── debug.prompt.md**Copilot Kit** is a production-ready collection of configurations for [GitHub Copilot](https://github.com/features/copilot) using **native VS Code customization** standards (January 2026). It works immediately after installation with no additional setup required.
+
+│   │   ├── test.prompt.md
+
+│   │   ├── deploy.prompt.mdnpx @shtokov/copilot-kit init
+
+│   │   └── ... (6 more)
+
+│   │### ✨ Key Features
+
+│   ├── instructions/        # 11 instruction files
+
+│   │   ├── create.instructions.md```**[English](#-english)** | **[Русский](#-русский)****[English](#-english)** | **[Русский](#-русский)**
+
+│   │   ├── debug.instructions.md
+
+│   │   ├── test.instructions.md- ✅ **Native Copilot Integration** — Uses official VS Code customization formats
+
+│   │   └── ... (8 more)
+
+│   │- ✅ **16 Custom Agents** — Specialized AI personas with `.agent.md` format
+
+│   └── copilot-instructions.md  # Global coding guidelines
+
+│- ✅ **40 Agent Skills** — Domain-specific knowledge using `SKILL.md` standard
+
+└── .vscode/
+
+    └── settings.json        # Copilot configuration- ✅ **11 Instructions** — Slash command templates with `.instructions.md` formatOr install globally:
+
+```
 
 - ✅ **5 Prompt Files** — Reusable prompts with `.prompt.md` format
 
+---
+
 - ✅ **Auto-configured settings** — `.vscode/settings.json` included
 
-
-
-### 📦 What's Included```bash```bash
-
-
-
-| Component | Count | Format | Description |npm install -g @shtokov/copilot-kitnpm install -g @shtokov/copilot-kit
-
-|-----------|-------|--------|-------------|
-
-| **Custom Agents** | 16 | `*.agent.md` | Specialist AI personas |copilot-kit initcopilot-kit init
-
-| **Agent Skills** | 40 | `*/SKILL.md` | Domain-specific knowledge |
-
-| **Instructions** | 11 | `*.instructions.md` | Slash command templates |``````
-
-| **Prompt Files** | 5 | `*.prompt.md` | Reusable prompt templates |
+## 🤖 Agents (16)
 
 
 
-### 📁 Project Structure
+Custom agents are specialized AI personas accessible via `@agent-name` in Copilot Chat.
 
-------
+### 📦 What's Included```bash</div></div>
 
-```
+| Agent | Description | Triggers |
 
-.github/
+|-------|-------------|----------|
 
-├── agents/                    # 16 Custom Agents (*.agent.md)
+| `orchestrator` | Multi-agent coordination | complex tasks, planning |
 
-│   ├── orchestrator.agent.md<a name="-english"></a><a name="-english"></a>
+| `project-planner` | Project planning, task breakdown | new project, plan || Component | Count | Format | Description |npm install -g @shtokov/copilot-kit
+
+| `frontend-specialist` | React, Next.js, UI/UX | component, ui, css |
+
+| `backend-specialist` | Node.js, APIs, databases | api, server, endpoint ||-----------|-------|--------|-------------|
+
+| `debugger` | Root cause analysis | bug, error, crash |
+
+| `test-engineer` | Testing, TDD, coverage | test, spec, coverage || **Custom Agents** | 16 | `*.agent.md` | Specialist AI personas |copilot-kit init
+
+| `security-auditor` | Security, OWASP, vulnerabilities | security, auth, xss |
+
+| `devops-engineer` | Deployment, CI/CD | deploy, docker, ci || **Agent Skills** | 40 | `*/SKILL.md` | Domain-specific knowledge |
+
+| `database-architect` | Schema design, optimization | database, sql, migration |
+
+| `performance-optimizer` | Speed, Core Web Vitals | performance, optimize || **Instructions** | 11 | `*.instructions.md` | Slash command templates |```
+
+| `mobile-developer` | React Native, Flutter | mobile, ios, android |
+
+| `documentation-writer` | Docs, README, API docs | document, readme || **Prompt Files** | 5 | `*.prompt.md` | Reusable prompt templates |
+
+| `explorer-agent` | Codebase discovery | explore, understand |
+
+| `game-developer` | Unity, Godot, game engines | game, unity, engine |------
+
+| `penetration-tester` | Offensive security | pentest, exploit |
+
+| `seo-specialist` | SEO, GEO optimization | seo, search, meta |### 📁 Project Structure
+
+
+
+### Agent Format (VS Code Native)---
+
+
+
+```yaml```
+
+---
+
+description: Expert backend architect for Node.js, Python, and modern serverless systems.github/
+
+name: backend-specialist
+
+tools: ['readFile', 'editFiles', 'createFile', 'runInTerminal', 'textSearch', 'fileSearch', 'codebase', 'problems']├── agents/                    # 16 Custom Agents (*.agent.md)
+
+---
+
+│   ├── orchestrator.agent.md<a name="-english"></a>
+
+# Backend Development Architect
 
 │   ├── frontend-specialist.agent.md
 
-│   └── ...
+You are an expert backend developer...
 
-├── skills/                    # 40 Agent Skills (*/SKILL.md)
+```│   └── ...## ⚡ Quick Start## ⚡ Quick Start
 
-│   ├── react-patterns/SKILL.md## 🇬🇧 English## ������ English
 
-│   ├── nextjs-best-practices/SKILL.md
 
-│   └── ...
+---├── skills/                    # 40 Agent Skills (*/SKILL.md)
 
-├── instructions/              # 11 Instructions (*.instructions.md)
 
-│   ├── create.instructions.md### What is Copilot Kit?### What is Copilot Kit?
 
-│   ├── debug.instructions.md
+## 📋 Prompts (10)│   ├── react-patterns/SKILL.md## 🇬🇧 English
 
-│   └── ...
 
-├── prompts/                   # 5 Prompt Files (*.prompt.md)
 
-│   ├── create.prompt.md**Copilot Kit** is a production-ready collection of configurations for [GitHub Copilot](https://github.com/features/copilot) using **native VS Code customization** standards (January 2026). It works immediately after installation with no additional setup required.**Copilot Kit** is a comprehensive collection of AI Agent templates designed to supercharge [GitHub Copilot](https://github.com/features/copilot). It includes **16 Custom Agents**, **40+ Prompt Files**, and **11 Instructions**.
+Prompt files are reusable commands accessible via `/prompt-name` in chat.│   ├── nextjs-best-practices/SKILL.md
+
+
+
+| Prompt | Description | Agent |│   └── ...
+
+|--------|-------------|-------|
+
+| `/brainstorm` | Explore options before implementation | ask |├── instructions/              # 11 Instructions (*.instructions.md)
+
+| `/create` | Create new features or applications | agent |
+
+| `/debug` | Systematic debugging | agent |│   ├── create.instructions.md### What is Copilot Kit?
+
+| `/deploy` | Production deployment with checks | orchestrator |
+
+| `/enhance` | Add features to existing app | orchestrator |│   ├── debug.instructions.md
+
+| `/orchestrate` | Coordinate multiple agents | orchestrator |
+
+| `/plan` | Generate implementation plan | ask |│   └── ...```bash```bash
+
+| `/preview` | Manage preview server | agent |
+
+| `/status` | Display project status | agent |├── prompts/                   # 5 Prompt Files (*.prompt.md)
+
+| `/test` | Generate and run tests | agent |
+
+│   ├── create.prompt.md**Copilot Kit** is a production-ready collection of configurations for [GitHub Copilot](https://github.com/features/copilot) using **native VS Code customization** standards (January 2026). It works immediately after installation with no additional setup required.
+
+### Prompt Format
 
 │   ├── debug.prompt.md
 
-│   └── ...
+```yaml
 
-├── copilot-instructions.md    # Repository Instructions (applyTo: "**")
+---│   └── ...npx @shtokov/copilot-kit initnpx @shtokov/copilot-kit init
 
-└── ARCHITECTURE.md            # Full documentation### ✨ Key Features### ��� What's Included
+description: Systematic debugging with root cause analysis
 
-.vscode/
+agent: agent├── copilot-instructions.md    # Repository Instructions (applyTo: "**")
 
-└── settings.json              # Pre-configured Copilot settings
+tools: ['codebase', 'textSearch', 'readFile', 'problems', 'runInTerminal']
+
+---└── ARCHITECTURE.md            # Full documentation### ✨ Key Features
+
+
+
+# Debug.vscode/
+
+
+
+Instructions for debugging...└── settings.json              # Pre-configured Copilot settings``````
 
 ```
 
-- ✅ **Native Copilot Integration** — Uses official VS Code customization formats| Component | Count | Description |
+```
+
+---
+
+- ✅ **Native Copilot Integration** — Uses official VS Code customization formats
+
+## 📚 Skills (40)
 
 ### 🤖 Custom Agents (16)
 
-- ✅ **16 Custom Agents** — Specialized AI personas with `.agent.md` format|-----------|-------|-------------|
+Skills are domain-specific knowledge libraries that agents can reference.
 
-Use `@agent-name` in GitHub Copilot Chat:
+- ✅ **16 Custom Agents** — Specialized AI personas with `.agent.md` format
 
-- ✅ **40 Agent Skills** — Domain-specific knowledge using `SKILL.md` standard| **Custom Agents** | 16 | Specialist AI personas |
+### Development Skills
 
-| Agent | Description |
+| Skill | Description |Select from the agent picker in GitHub Copilot Chat:
 
-|-------|-------------|- ✅ **11 Instructions** — Slash command templates with `.instructions.md` format| **Prompt Files** | 40+ | Domain-specific knowledge |
+|-------|-------------|
 
-| **@orchestrator** | Multi-agent coordination for complex tasks |
+| `app-builder` | Full-stack application scaffolding |- ✅ **40 Agent Skills** — Domain-specific knowledge using `SKILL.md` standard
 
-| **@project-planner** | Architecture and planning |- ✅ **5 Prompt Files** — Reusable prompts with `.prompt.md` format| **Instructions** | 11 | Slash command templates |
+| `architecture` | Architectural patterns and decisions |
 
-| **@frontend-specialist** | React, Next.js, Vue, CSS, animations |
+| `react-patterns` | Modern React hooks and composition || Agent | Description |
 
-| **@backend-specialist** | API, databases, server optimization |- ✅ **Auto-configured settings** — `.vscode/settings.json` included
+| `typescript-expert` | Advanced TypeScript patterns |
 
-| **@mobile-developer** | React Native, Flutter, iOS, Android |
+| `nextjs-best-practices` | Next.js App Router patterns ||-------|-------------|- ✅ **11 Instructions** — Slash command templates with `.instructions.md` formatOr install globally:Or install globally:
 
-| **@database-architect** | Schema design, indexing, migrations |### ��� Project Structure
+| `nodejs-best-practices` | Node.js async patterns |
 
-| **@security-auditor** | Vulnerability scanning, OWASP |
+| `prisma-expert` | Prisma ORM mastery || **orchestrator** | Multi-agent coordination for complex tasks |
 
-| **@penetration-tester** | Red team tactics, exploit development |### 📦 What's Included
+| `nestjs-expert` | NestJS framework patterns |
 
-| **@debugger** | Root cause analysis, bug fixing |
+| **project-planner** | Architecture and planning |- ✅ **5 Prompt Files** — Reusable prompts with `.prompt.md` format
 
-| **@performance-optimizer** | Core Web Vitals, profiling |```
+### Frontend Skills
 
-| **@devops-engineer** | CI/CD, Docker, Kubernetes |
+| Skill | Description || **frontend-specialist** | React, Next.js, Vue, CSS, animations |
 
-| **@test-engineer** | Unit, integration, E2E testing || Component | Count | Format | Description |.github/
+|-------|-------------|
 
-| **@documentation-writer** | API docs, technical writing |
+| `frontend-design` | UI/UX design principles || **backend-specialist** | API, databases, server optimization |- ✅ **Auto-configured settings** — `.vscode/settings.json` included
 
-| **@seo-specialist** | Technical SEO optimization ||-----------|-------|--------|-------------|├── agents/                    # 16 Custom Agents
+| `tailwind-patterns` | Tailwind CSS v4 patterns |
 
-| **@game-developer** | Unity, Unreal, WebGL |
+| `mobile-design` | iOS/Android design || **mobile-developer** | React Native, Flutter, iOS, Android |
 
-| **@explorer-agent** | Codebase exploration || **Custom Agents** | 16 | `*.agent.md` | Specialist AI personas |├── prompts/                   # 40+ Prompt Files
+| `ui-ux-pro-max` | 50 styles, 21 palettes, 50 fonts |
+
+| **database-architect** | Schema design, indexing, migrations |
+
+### Backend & Data Skills
+
+| Skill | Description || **security-auditor** | Vulnerability scanning, OWASP |
+
+|-------|-------------|
+
+| `api-patterns` | REST, GraphQL, tRPC || **penetration-tester** | Red team tactics, exploit development |### 📦 What's Included```bash```bash
+
+| `database-design` | Schema, indexing, migrations |
+
+| `mcp-builder` | MCP server development || **debugger** | Root cause analysis, bug fixing |
 
 
 
-### 📋 Instructions (11)| **Agent Skills** | 40 | `*/SKILL.md` | Domain-specific knowledge |├── instructions/              # 11 Instructions
+### Testing & Quality| **performance-optimizer** | Core Web Vitals, profiling |
+
+| Skill | Description |
+
+|-------|-------------|| **devops-engineer** | CI/CD, Docker, Kubernetes |
+
+| `testing-patterns` | Unit, integration, E2E |
+
+| `tdd-workflow` | Test-driven development || **test-engineer** | Unit, integration, E2E testing || Component | Count | Format | Description |npm install -g @shtokov/copilot-kitnpm install -g @shtokov/copilot-kit
+
+| `webapp-testing` | Playwright, E2E testing |
+
+| `clean-code` | Code quality standards || **documentation-writer** | README, API docs, changelogs |
+
+| `code-review-checklist` | Review guidelines |
+
+| **seo-specialist** | SEO, Core Web Vitals, AI visibility ||-----------|-------|--------|-------------|
+
+### Security Skills
+
+| Skill | Description || **game-developer** | Unity, Godot, Unreal, Three.js |
+
+|-------|-------------|
+
+| `vulnerability-scanner` | OWASP 2025 analysis || **explorer-agent** | Codebase discovery and research || **Custom Agents** | 16 | `*.agent.md` | Specialist AI personas |copilot-kit initcopilot-kit init
+
+| `red-team-tactics` | Offensive security |
 
 
 
-Attach via Copilot Edits or use in Chat:| **Instructions** | 11 | `*.instructions.md` | Slash command templates |├── copilot-instructions.md    # Repository Instructions
+### DevOps Skills
+
+| Skill | Description |### 📝 Agent Skills (40)| **Agent Skills** | 40 | `*/SKILL.md` | Domain-specific knowledge |
+
+|-------|-------------|
+
+| `docker-expert` | Containerization |
+
+| `deployment-procedures` | Safe deployments |
+
+| `server-management` | Server operations |Skills are automatically loaded when relevant to your request:| **Instructions** | 11 | `*.instructions.md` | Slash command templates |``````
+
+| `bash-linux` | Linux commands |
+
+| `powershell-windows` | Windows automation |
 
 
 
-| Command | Description || **Prompt Files** | 5 | `*.prompt.md` | Reusable prompt templates |└── ARCHITECTURE.md            # Full documentation
+### Specialized Skills| Category | Skills || **Prompt Files** | 5 | `*.prompt.md` | Reusable prompt templates |
 
-|---------|-------------|
+| Skill | Description |
 
-| `/brainstorm` | Explore options with Socratic questioning |```
+|-------|-------------||----------|--------|
 
-| `/create` | Create new features, components |
+| `game-development` | Game engines and patterns |
 
-| `/debug` | Systematic debugging with RCA |### 📁 Project Structure
+| `seo-fundamentals` | Search optimization || **Frontend** | react-patterns, nextjs-best-practices, tailwind-patterns, frontend-design |
 
-| `/deploy` | Deploy with safety checks |
+| `geo-fundamentals` | AI search optimization |
 
-| `/enhance` | Improve code quality |### ��� Custom Agents (16)
+| `i18n-localization` | Internationalization || **Backend** | api-patterns, nodejs-best-practices, nestjs-expert, prisma-expert |
 
-| `/orchestrate` | Multi-agent coordination |
+| `performance-profiling` | Performance analysis |
 
-| `/plan` | Create implementation plans |```
+| **Database** | database-design, architecture |### 📁 Project Structure
 
-| `/preview` | Preview changes locally |
+### Skill Format
 
-| `/status` | Check project health |.github/| Agent | Description |
+| **Testing** | testing-patterns, tdd-workflow, webapp-testing |
+
+```yaml
+
+---| **Security** | vulnerability-scanner, red-team-tactics |------
+
+name: typescript-expert
+
+description: TypeScript expert with deep knowledge of type-level programming| **DevOps** | docker-expert, server-management, deployment-procedures |
+
+---
+
+| **Mobile** | mobile-design |```
+
+# TypeScript Expert
+
+| **Other** | clean-code, documentation-templates, i18n-localization, seo-fundamentals |
+
+## Type System
+
+...patterns and knowledge....github/
+
+```
+
+### 🎯 Prompt Files (5)
+
+---
+
+├── agents/                    # 16 Custom Agents (*.agent.md)
+
+## 📖 Instructions (11)
+
+Type `/` in chat to use prompts:
+
+Instructions are behavioral guidelines applied to specific commands.
+
+│   ├── orchestrator.agent.md<a name="-english"></a><a name="-english"></a>
+
+| Instruction | Description |
+
+|-------------|-------------|| Prompt | Description |
+
+| `brainstorm` | Socratic questioning protocol |
+
+| `create` | App creation workflow ||--------|-------------|│   ├── frontend-specialist.agent.md
+
+| `debug` | Systematic debugging mode |
+
+| `deploy` | Pre-flight checks and deployment || `/create` | Create new features or applications |
+
+| `enhance` | Feature addition workflow |
+
+| `orchestrate` | Multi-agent coordination || `/debug` | Systematic debugging with root cause analysis |│   └── ...
+
+| `plan` | Structured planning |
+
+| `preview` | Preview server management || `/plan` | Generate implementation plans |
+
+| `status` | Project status display |
+
+| `test` | Test generation and execution || `/test` | Generate and run tests |├── skills/                    # 40 Agent Skills (*/SKILL.md)
+
+| `ui-ux-pro-max` | UI/UX design guidelines |
+
+| `/brainstorm` | Explore options before implementation |
+
+### Instruction Format
+
+│   ├── react-patterns/SKILL.md## 🇬🇧 English## ������ English
+
+```yaml
+
+---### ⚙️ Instructions (11)
+
+description: Debugging command. Activates DEBUG mode for systematic investigation.
+
+---│   ├── nextjs-best-practices/SKILL.md
+
+
+
+# /debug - Systematic Problem InvestigationInstructions are triggered via slash commands in chat:
+
+
+
+## Behavior│   └── ...
+
+When `/debug` is triggered:
+
+1. Enter DEBUG mode| Instruction | Description |
+
+2. Gather evidence
+
+3. Form hypotheses|-------------|-------------|├── instructions/              # 11 Instructions (*.instructions.md)
+
+...
+
+```| `/create` | Create new application command |
+
+
+
+---| `/debug` | Debugging with systematic investigation |│   ├── create.instructions.md### What is Copilot Kit?### What is Copilot Kit?
+
+
+
+## ⚙️ VS Code Settings| `/plan` | Create project plans |
+
+
+
+The kit includes pre-configured settings:| `/test` | Generate and run tests |│   ├── debug.instructions.md
+
+
+
+```jsonc| `/brainstorm` | Structured idea exploration |
+
+{
+
+    "chat.agent.enabled": true,| `/enhance` | Add or update features |│   └── ...
+
+    "chat.agent.maxRequests": 30,
+
+    "chat.useAgentSkills": true,| `/deploy` | Deployment commands |
+
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+    "chat.promptFilesLocations": {| `/preview` | Preview server management |├── prompts/                   # 5 Prompt Files (*.prompt.md)
+
+        ".github/prompts": true
+
+    },| `/status` | Display project status |
+
+    "chat.instructionsFilesLocations": {
+
+        ".github/instructions": true| `/orchestrate` | Multi-agent coordination |│   ├── create.prompt.md**Copilot Kit** is a production-ready collection of configurations for [GitHub Copilot](https://github.com/features/copilot) using **native VS Code customization** standards (January 2026). It works immediately after installation with no additional setup required.**Copilot Kit** is a comprehensive collection of AI Agent templates designed to supercharge [GitHub Copilot](https://github.com/features/copilot). It includes **16 Custom Agents**, **40+ Prompt Files**, and **11 Instructions**.
+
+    }
+
+}| `/ui-ux-pro-max` | Plan and implement UI |
+
+```
+
+│   ├── debug.prompt.md
+
+---
+
+### 🔧 VS Code Settings
+
+## 🛠️ VS Code Built-in Tools
+
+│   └── ...
+
+Agents and prompts can use these native VS Code tools:
+
+The kit includes pre-configured settings in `.vscode/settings.json`:
+
+| Tool | Description |
+
+|------|-------------|├── copilot-instructions.md    # Repository Instructions (applyTo: "**")
+
+| `readFile` | Read file contents |
+
+| `editFiles` | Edit existing files |```json
+
+| `createFile` | Create new files |
+
+| `runInTerminal` | Execute terminal commands |{└── ARCHITECTURE.md            # Full documentation### ✨ Key Features### ��� What's Included
+
+| `textSearch` | Search text in files |
+
+| `fileSearch` | Search files by pattern |  "chat.agent.enabled": true,
+
+| `codebase` | Semantic code search |
+
+| `problems` | Workspace errors/warnings |  "chat.agent.maxRequests": 30,.vscode/
+
+| `usages` | Find references |
+
+| `listDirectory` | List directory contents |  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+
+| `fetch` | Fetch web content |
+
+| `githubRepo` | Search GitHub repos |  "chat.useAgentSkills": true,└── settings.json              # Pre-configured Copilot settings
+
+| `runTests` | Run unit tests |
+
+| `testFailure` | Get test failure info |  "chat.promptFilesLocations": {
+
+| `changes` | Source control changes |
+
+    ".github/prompts": true```
+
+---
+
+  },
+
+## 📝 CLI Commands
+
+  "github.copilot.chat.customAgents.showOrganizationAndEnterpriseAgents": true- ✅ **Native Copilot Integration** — Uses official VS Code customization formats| Component | Count | Description |
+
+```bash
+
+# Initialize in current directory}
+
+copilot-kit init
+
+```### 🤖 Custom Agents (16)
+
+# Initialize in specific directory
+
+copilot-kit init ./my-project
+
+
+
+# Show help### 📖 Documentation- ✅ **16 Custom Agents** — Specialized AI personas with `.agent.md` format|-----------|-------|-------------|
+
+copilot-kit --help
+
+
+
+# Show version
+
+copilot-kit --version- [VS Code Custom Agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents)Use `@agent-name` in GitHub Copilot Chat:
+
+```
+
+- [VS Code Agent Skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+
+---
+
+- [VS Code Prompt Files](https://code.visualstudio.com/docs/copilot/customization/prompt-files)- ✅ **40 Agent Skills** — Domain-specific knowledge using `SKILL.md` standard| **Custom Agents** | 16 | Specialist AI personas |
+
+## 🔄 Updates
+
+- [VS Code Custom Instructions](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
+
+To update to the latest version:
+
+- [VS Code Chat Tools](https://code.visualstudio.com/docs/copilot/chat/chat-tools)| Agent | Description |
+
+```bash
+
+# Update global installation
+
+npm update -g @shtokov/copilot-kit
+
+---|-------|-------------|- ✅ **11 Instructions** — Slash command templates with `.instructions.md` format| **Prompt Files** | 40+ | Domain-specific knowledge |
+
+# Re-run init to get new configs
+
+copilot-kit init
+
+```
+
+<a name="-русский"></a>| **@orchestrator** | Multi-agent coordination for complex tasks |
+
+---
+
+
+
+<a name="-русский"></a>
+
+## 🇷🇺 Русский| **@project-planner** | Architecture and planning |- ✅ **5 Prompt Files** — Reusable prompts with `.prompt.md` format| **Instructions** | 11 | Slash command templates |
+
+## 🇷🇺 Русский
+
+
+
+### Что такое Copilot Kit?
+
+### Что такое Copilot Kit?| **@frontend-specialist** | React, Next.js, Vue, CSS, animations |
+
+**Copilot Kit** — готовая к работе коллекция конфигураций для [GitHub Copilot](https://github.com/features/copilot), использующая **нативные стандарты VS Code** (январь 2026). Работает сразу после установки без дополнительной настройки.
+
+
+
+### ✨ Ключевые возможности
+
+**Copilot Kit** — готовый к использованию набор конфигураций для [GitHub Copilot](https://github.com/features/copilot), использующий **нативные стандарты кастомизации VS Code** (январь 2026). Работает сразу после установки без дополнительной настройки.| **@backend-specialist** | API, databases, server optimization |- ✅ **Auto-configured settings** — `.vscode/settings.json` included
+
+| Возможность | Кол-во | Описание |
+
+|-------------|--------|----------|
+
+| **Агенты** | 16 | Специализированные AI-персоны (`.agent.md`) |
+
+| **Навыки** | 40 | Библиотеки знаний (`SKILL.md`) |### ✨ Ключевые возможности| **@mobile-developer** | React Native, Flutter, iOS, Android |
+
+| **Промпты** | 10 | Переиспользуемые команды (`.prompt.md`) |
+
+| **Инструкции** | 11 | Поведенческие гайдлайны (`.instructions.md`) |
+
+| **Настройки VS Code** | ✓ | Готовый `.vscode/settings.json` |
+
+- ✅ **Нативная интеграция с Copilot** — Использует официальные форматы VS Code| **@database-architect** | Schema design, indexing, migrations |### ��� Project Structure
+
+### 📦 Установка
+
+- ✅ **16 Кастомных агентов** — Специализированные AI персоны в формате `.agent.md`
+
+```bash
+
+npx @shtokov/copilot-kit init- ✅ **40 Навыков агентов** — Доменные знания в формате `SKILL.md`| **@security-auditor** | Vulnerability scanning, OWASP |
+
+```
+
+- ✅ **11 Инструкций** — Шаблоны слэш-команд в формате `.instructions.md`
+
+Или глобально:
+
+- ✅ **5 Промпт-файлов** — Переиспользуемые промпты в формате `.prompt.md`| **@penetration-tester** | Red team tactics, exploit development |### 📦 What's Included
+
+```bash
+
+npm install -g @shtokov/copilot-kit- ✅ **Автоматическая настройка** — `.vscode/settings.json` включён
+
+copilot-kit init
+
+```| **@debugger** | Root cause analysis, bug fixing |
+
+
+
+### 🤖 Агенты (16)### 🚀 Быстрый старт
+
+
+
+| Агент | Описание || **@performance-optimizer** | Core Web Vitals, profiling |```
+
+|-------|----------|
+
+| `orchestrator` | Координация нескольких агентов |```bash
+
+| `project-planner` | Планирование проекта |
+
+| `frontend-specialist` | React, Next.js, UI/UX |npx @shtokov/copilot-kit init| **@devops-engineer** | CI/CD, Docker, Kubernetes |
+
+| `backend-specialist` | Node.js, API, базы данных |
+
+| `debugger` | Анализ причин ошибок |```
+
+| `test-engineer` | Тестирование, TDD |
+
+| `security-auditor` | Безопасность, OWASP || **@test-engineer** | Unit, integration, E2E testing || Component | Count | Format | Description |.github/
+
+| `devops-engineer` | Деплой, CI/CD |
+
+| `database-architect` | Схемы БД, оптимизация |### 🤖 Кастомные агенты (16)
+
+| `performance-optimizer` | Производительность |
+
+| `mobile-developer` | React Native, Flutter || **@documentation-writer** | API docs, technical writing |
+
+| `documentation-writer` | Документация |
+
+| `explorer-agent` | Исследование кодовой базы |Выберите агента из выпадающего списка в GitHub Copilot Chat:
+
+| `game-developer` | Разработка игр |
+
+| `penetration-tester` | Тестирование на проникновение || **@seo-specialist** | Technical SEO optimization ||-----------|-------|--------|-------------|├── agents/                    # 16 Custom Agents
+
+| `seo-specialist` | SEO оптимизация |
+
+| Агент | Описание |
+
+### 📋 Промпты (10)
+
+|-------|----------|| **@game-developer** | Unity, Unreal, WebGL |
+
+| Промпт | Описание |
+
+|--------|----------|| **orchestrator** | Координация нескольких агентов для сложных задач |
+
+| `/brainstorm` | Изучение вариантов |
+
+| `/create` | Создание нового || **project-planner** | Архитектура и планирование || **@explorer-agent** | Codebase exploration || **Custom Agents** | 16 | `*.agent.md` | Specialist AI personas |├── prompts/                   # 40+ Prompt Files
+
+| `/debug` | Отладка |
+
+| `/deploy` | Деплой || **frontend-specialist** | React, Next.js, Vue, CSS, анимации |
+
+| `/enhance` | Добавление фич |
+
+| `/orchestrate` | Координация агентов || **backend-specialist** | API, базы данных, серверная оптимизация |
+
+| `/plan` | Планирование |
+
+| `/preview` | Превью сервер || **mobile-developer** | React Native, Flutter, iOS, Android |
+
+| `/status` | Статус проекта |
+
+| `/test` | Тесты || **database-architect** | Проектирование схем, индексация, миграции |### 📋 Instructions (11)| **Agent Skills** | 40 | `*/SKILL.md` | Domain-specific knowledge |├── instructions/              # 11 Instructions
+
+
+
+### 📚 Навыки (40 директорий)| **security-auditor** | Сканирование уязвимостей, OWASP |
+
+
+
+**Разработка:** app-builder, architecture, react-patterns, typescript-expert, nextjs-best-practices, nodejs-best-practices, prisma-expert, nestjs-expert| **penetration-tester** | Тактики red team, разработка эксплойтов |
+
+
+
+**Фронтенд:** frontend-design, tailwind-patterns, mobile-design, ui-ux-pro-max| **debugger** | Анализ корневых причин, исправление багов |
+
+
+
+**Бэкенд:** api-patterns, database-design, mcp-builder| **performance-optimizer** | Core Web Vitals, профилирование |Attach via Copilot Edits or use in Chat:| **Instructions** | 11 | `*.instructions.md` | Slash command templates |├── copilot-instructions.md    # Repository Instructions
+
+
+
+**Тестирование:** testing-patterns, tdd-workflow, webapp-testing, clean-code, code-review-checklist| **devops-engineer** | CI/CD, Docker, Kubernetes |
+
+
+
+**Безопасность:** vulnerability-scanner, red-team-tactics| **test-engineer** | Unit, integration, E2E тестирование |
+
+
+
+**DevOps:** docker-expert, deployment-procedures, server-management, bash-linux, powershell-windows
+
+
+
+**Специальные:** game-development, seo-fundamentals, geo-fundamentals, i18n-localization, performance-profiling### 🎯 Промпт-файлы (5)| Command | Description || **Prompt Files** | 5 | `*.prompt.md` | Reusable prompt templates |└── ARCHITECTURE.md            # Full documentation
+
+
+
+---
+
+
+
+## 📄 LicenseВведите `/` в чате для использования промптов:|---------|-------------|
+
+
+
+MIT © [Ivan Shtokov](https://github.com/ivanshtokov)
+
+
+
+---| Промпт | Описание || `/brainstorm` | Explore options with Socratic questioning |```
+
+
+
+## 🤝 Contributing|--------|----------|
+
+
+
+Contributions welcome! Please read the [contribution guidelines](CONTRIBUTING.md) first.| `/create` | Создание новых фич или приложений || `/create` | Create new features, components |
+
+
+
+---| `/debug` | Систематическая отладка с анализом причин |
+
+
+
+## 📬 Contact| `/plan` | Генерация планов реализации || `/debug` | Systematic debugging with RCA |### 📁 Project Structure
+
+
+
+- **Telegram:** [@IShtokov](https://t.me/IShtokov)| `/test` | Генерация и запуск тестов |
+
+- **GitHub:** [ivanshtokov](https://github.com/ivanshtokov)
+
+- **NPM:** [@shtokov/copilot-kit](https://www.npmjs.com/package/@shtokov/copilot-kit)| `/brainstorm` | Исследование вариантов перед реализацией || `/deploy` | Deploy with safety checks |
+
+
+
+---
+
+
+
+<div align="center">---| `/enhance` | Improve code quality |### ��� Custom Agents (16)
+
+
+
+**⭐ Star this repo if you find it useful!**
+
+
+
+Made with ❤️ for the GitHub Copilot community## 📄 License| `/orchestrate` | Multi-agent coordination |
+
+
+
+</div>
+
+
+MIT License — свободное использование в любых проектах.| `/plan` | Create implementation plans |```
+
+
+
+## 👤 Author| `/preview` | Preview changes locally |
+
+
+
+**Ivan Shtokov**  | `/status` | Check project health |.github/| Agent | Description |
+
+Telegram: [@IShtokov](https://t.me/IShtokov)
 
 | `/test` | Generate and run tests |
 
+---
+
 | `/ui-ux-pro-max` | Professional UI/UX design |├── agents/                    # 16 Custom Agents (*.agent.md)|-------|-------------|
 
+<div align="center">
 
+
+
+⭐ **Star this repo** if you find it useful!
 
 ### 🧩 Agent Skills (40)│   ├── orchestrator.agent.md| **orchestrator** | Multi-agent coordination |
+
+</div>
 
 
 
