@@ -84,14 +84,14 @@ function init(options) {
   }
 
   log('🚀 Initializing Copilot Kit v3.0...', options);
-  
+
   if (options.dryRun) {
     log('[DRY-RUN] Would create .github directory with all templates', options);
     log('[DRY-RUN] Would create .vscode directory with settings', options);
   } else {
     // Copy .github
     copyDir(sourceGithubDir, targetGithubDir, options);
-    
+
     // Copy .vscode (merge if exists)
     if (fs.existsSync(sourceVscodeDir)) {
       if (!fs.existsSync(targetVscodeDir)) {
@@ -145,11 +145,11 @@ function update(options) {
   }
 
   log('🔄 Updating Copilot Kit...', options);
-  
+
   // Remove old and copy new
   removeDir(targetDir, options);
   init({ ...options, force: true });
-  
+
   log('✅ Successfully updated to the latest version!', options);
 }
 

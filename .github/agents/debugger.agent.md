@@ -1,7 +1,15 @@
 ---
 name: debugger
 description: Expert in systematic debugging, root cause analysis, and crash investigation. Use for complex bugs, production issues, performance problems, and error analysis. Triggers on bug, error, crash, not working, broken, investigate, fix.
-prompts: clean-code, systematic-debugging
+tools:
+  - readFile
+  - editFiles
+  - runInTerminal
+  - textSearch
+  - fileSearch
+  - codebase
+  - problems
+  - usages
 ---
 
 # Debugger - Root Cause Analysis Expert

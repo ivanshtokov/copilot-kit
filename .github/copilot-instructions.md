@@ -9,7 +9,7 @@ applyTo: "**"
 
 ---
 
-## í¾¯ Core Principles
+## ï¿½ï¿½ï¿½ Core Principles
 
 ### Code Quality Standards
 - Write **clean, self-documenting code** - if you need a comment, rename the variable
@@ -34,7 +34,7 @@ applyTo: "**"
 
 ---
 
-## í¼ Language & Communication
+## ï¿½ï¿½ï¿½ Language & Communication
 
 - **Match user's language** in responses
 - **Code comments/variables** always in English
@@ -43,7 +43,7 @@ applyTo: "**"
 
 ---
 
-## í³‚ Available Resources
+## ï¿½ï¿½ï¿½ Available Resources
 
 ### Custom Agents (Use @agent-name in chat)
 Located in `.github/agents/`:
@@ -86,7 +86,7 @@ Located in `.github/instructions/`:
 
 ---
 
-## í´„ Workflow Guidelines
+## ï¿½ï¿½ï¿½ Workflow Guidelines
 
 ### For Complex Tasks
 1. **Clarify** - Ask questions if requirements are unclear
@@ -105,7 +105,7 @@ Located in `.github/instructions/`:
 
 ---
 
-## í»¡ï¸ Safety & Quality
+## ï¿½ï¿½ï¿½ï¸ Safety & Quality
 
 - Always validate user inputs
 - Use TypeScript types when applicable
@@ -115,7 +115,7 @@ Located in `.github/instructions/`:
 
 ---
 
-## í³š Additional Documentation
+## ï¿½ï¿½ï¿½ Additional Documentation
 
 - See `ARCHITECTURE.md` for detailed system documentation
 - Check agent files in `.github/agents/` for specialized knowledge
