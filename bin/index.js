@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const VERSION = '2.0.0';
+const VERSION = '3.0.0';
 const PACKAGE_NAME = '@shtokov/copilot-kit';
 
 // Parse CLI arguments
@@ -68,38 +68,71 @@ function removeDir(dir, options = {}) {
 }
 
 function init(options) {
-  const sourceDir = path.join(__dirname, '../.github');
-  const targetDir = path.join(options.path, '.github');
+  const sourceGithubDir = path.join(__dirname, '../.github');
+  const sourceVscodeDir = path.join(__dirname, '../.vscode');
+  const targetGithubDir = path.join(options.path, '.github');
+  const targetVscodeDir = path.join(options.path, '.vscode');
 
-  if (fs.existsSync(targetDir)) {
+  if (fs.existsSync(targetGithubDir)) {
     if (options.force) {
       log('⚠️  Removing existing .github directory...', options);
-      removeDir(targetDir, options);
+      removeDir(targetGithubDir, options);
     } else {
       console.error('Error: .github directory already exists. Use --force to overwrite.');
       process.exit(1);
     }
   }
 
-  log('🚀 Initializing Copilot Kit...', options);
+  log('🚀 Initializing Copilot Kit v3.0...', options);
   
   if (options.dryRun) {
     log('[DRY-RUN] Would create .github directory with all templates', options);
+    log('[DRY-RUN] Would create .vscode directory with settings', options);
   } else {
-    copyDir(sourceDir, targetDir, options);
+    // Copy .github
+    copyDir(sourceGithubDir, targetGithubDir, options);
+    
+    // Copy .vscode (merge if exists)
+    if (fs.existsSync(sourceVscodeDir)) {
+      if (!fs.existsSync(targetVscodeDir)) {
+        fs.mkdirSync(targetVscodeDir, { recursive: true });
+      }
+      // Copy settings.json
+      const sourceSettings = path.join(sourceVscodeDir, 'settings.json');
+      const targetSettings = path.join(targetVscodeDir, 'settings.json');
+      if (fs.existsSync(sourceSettings)) {
+        if (fs.existsSync(targetSettings)) {
+          // Merge settings
+          try {
+            const existingSettings = JSON.parse(fs.readFileSync(targetSettings, 'utf8'));
+            const newSettings = JSON.parse(fs.readFileSync(sourceSettings, 'utf8'));
+            const mergedSettings = { ...existingSettings, ...newSettings };
+            fs.writeFileSync(targetSettings, JSON.stringify(mergedSettings, null, 2));
+            log('📝 Merged Copilot settings into existing .vscode/settings.json', options);
+          } catch (e) {
+            fs.copyFileSync(sourceSettings, targetSettings);
+          }
+        } else {
+          fs.copyFileSync(sourceSettings, targetSettings);
+        }
+      }
+    }
   }
 
   log('', options);
   log('✅ Successfully initialized Copilot Kit!', options);
   log('', options);
   log('📁 Installed:', options);
-  log('   • 16 Custom Agents (.github/agents/)', options);
-  log('   • 40+ Prompt Files (.github/prompts/)', options);
-  log('   • 11 Instructions (.github/instructions/)', options);
+  log('   • 16 Custom Agents (.github/agents/*.agent.md)', options);
+  log('   • 40 Agent Skills (.github/skills/*/SKILL.md)', options);
+  log('   • 11 Instructions (.github/instructions/*.instructions.md)', options);
+  log('   • 5 Prompt Files (.github/prompts/*.prompt.md)', options);
+  log('   • VS Code settings (.vscode/settings.json)', options);
   log('', options);
   log('🎯 Next steps:', options);
-  log('   • Use @AgentName in Copilot Chat to activate agents', options);
-  log('   • Use /command to trigger instructions', options);
+  log('   • Use @agent-name in Copilot Chat to activate agents', options);
+  log('   • Attach instructions via Copilot Edits panel', options);
+  log('   • Skills are auto-loaded for domain-specific context', options);
   log('   • Read .github/copilot-instructions.md for configuration', options);
 }
 
@@ -123,8 +156,10 @@ function update(options) {
 function status(options) {
   const targetDir = path.join(options.path, '.github');
   const agentsDir = path.join(targetDir, 'agents');
+  const skillsDir = path.join(targetDir, 'skills');
   const promptsDir = path.join(targetDir, 'prompts');
   const instructionsDir = path.join(targetDir, 'instructions');
+  const vscodeDir = path.join(options.path, '.vscode');
 
   console.log('');
   console.log('📊 Copilot Kit Status');
@@ -142,20 +177,32 @@ function status(options) {
 
   // Count agents
   if (fs.existsSync(agentsDir)) {
-    const agents = fs.readdirSync(agentsDir).filter(f => f.endsWith('.md'));
-    console.log(`📦 Agents: ${agents.length}`);
+    const agents = fs.readdirSync(agentsDir).filter(f => f.endsWith('.agent.md'));
+    console.log(`🤖 Agents: ${agents.length}`);
+  }
+
+  // Count skills
+  if (fs.existsSync(skillsDir)) {
+    const skills = fs.readdirSync(skillsDir).filter(f => fs.statSync(path.join(skillsDir, f)).isDirectory());
+    console.log(`🧩 Skills: ${skills.length}`);
   }
 
   // Count prompts
   if (fs.existsSync(promptsDir)) {
-    const prompts = fs.readdirSync(promptsDir).filter(f => fs.statSync(path.join(promptsDir, f)).isDirectory());
+    const prompts = fs.readdirSync(promptsDir).filter(f => f.endsWith('.prompt.md'));
     console.log(`📚 Prompt Files: ${prompts.length}`);
   }
 
   // Count instructions
   if (fs.existsSync(instructionsDir)) {
-    const instructions = fs.readdirSync(instructionsDir).filter(f => f.endsWith('.md'));
+    const instructions = fs.readdirSync(instructionsDir).filter(f => f.endsWith('.instructions.md'));
     console.log(`📝 Instructions: ${instructions.length}`);
+  }
+
+  // Check VS Code settings
+  const settingsFile = path.join(vscodeDir, 'settings.json');
+  if (fs.existsSync(settingsFile)) {
+    console.log('⚙️  VS Code settings configured');
   }
 
   // Check copilot-instructions.md
@@ -171,13 +218,13 @@ function showHelp() {
   console.log(`
 ${PACKAGE_NAME} v${VERSION}
 
-AI Agent templates - Custom Agents, Prompt Files, and Instructions for GitHub Copilot
+Native GitHub Copilot Configuration Kit - Custom Agents, Agent Skills, Instructions, and Prompt Files
 
 Usage:
   npx ${PACKAGE_NAME} <command> [options]
 
 Commands:
-  init      Install .github folder into your project
+  init      Install .github and .vscode folders into your project
   update    Update to the latest version
   status    Check installation status
 

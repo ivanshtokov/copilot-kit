@@ -1,252 +1,122 @@
 ---
-trigger: always_on
+applyTo: "**"
 ---
 
-# copilot.md - Maestro Configuration
+# Copilot Kit - Repository Instructions
 
-> **Version 4.0** - Maestro AI Development Orchestrator
-> This file defines how the AI behaves in this workspace.
-
----
-
-## CRITICAL: AGENT & SKILL PROTOCOL (START HERE)
-
-> **MANDATORY:** You MUST read the appropriate agent file and its skills BEFORE performing any implementation. This is the highest priority rule.
-
-### 1. Modular Skill Loading Protocol
-```
-Agent activated → Check frontmatter "prompts:" field
-    │
-    └── For EACH skill:
-        ├── Read PROMPT.md (INDEX only)
-        ├── Find relevant sections from content map
-        └── Read ONLY those section files
-```
-
-- **Selective Reading:** DO NOT read ALL files in a skill folder. Read `PROMPT.md` first, then only read sections matching the user's request.
-- **Rule Priority:** P0 (copilot.md) > P1 (Agent .md) > P2 (PROMPT.md). All rules are binding.
-
-### 2. Enforcement Protocol
-1. **When agent is activated:**
-   - ✅ READ all rules inside the agent file.
-   - ✅ CHECK frontmatter `prompts:` list.
-   - ✅ LOAD each skill's `PROMPT.md`.
-   - ✅ APPLY all rules from agent AND skills.
-2. **Forbidden:** Never skip reading agent rules or skill instructions. "Read → Understand → Apply" is mandatory.
+> **Version 2.0** - AI-Enhanced Development Configuration
+> These instructions are automatically applied to all Copilot interactions in this workspace.
 
 ---
 
-## �📥 REQUEST CLASSIFIER (STEP 2)
+## ��� Core Principles
 
-**Before ANY action, classify the request:**
+### Code Quality Standards
+- Write **clean, self-documenting code** - if you need a comment, rename the variable
+- Follow **Single Responsibility Principle** - each function does ONE thing
+- Apply **DRY** (Don't Repeat Yourself) - extract duplicates immediately
+- Use **KISS** (Keep It Simple) - simplest solution that works
+- Practice **YAGNI** (You Aren't Gonna Need It) - don't build unused features
 
-| Request Type | Trigger Keywords | Active Tiers | Result |
-|--------------|------------------|--------------|--------|
-| **QUESTION** | "what is", "how does", "explain" | TIER 0 only | Text Response |
-| **SURVEY/INTEL**| "analyze", "list files", "overview" | TIER 0 + Explorer | Session Intel (No File) |
-| **SIMPLE CODE** | "fix", "add", "change" (single file) | TIER 0 + TIER 1 (lite) | Inline Edit |
-| **COMPLEX CODE**| "build", "create", "implement", "refactor" | TIER 0 + TIER 1 (full) + Agent | **{task-slug}.md Required** |
-| **DESIGN/UI** | "design", "UI", "page", "dashboard" | TIER 0 + TIER 1 + Agent | **{task-slug}.md Required** |
-| **SLASH CMD** | /create, /orchestrate, /debug | Command-specific flow | Variable |
+### Naming Conventions
+| Element | Convention | Example |
+|---------|------------|---------|
+| Variables | Reveal intent | `userCount` not `n` |
+| Functions | Verb + noun | `getUserById()` not `user()` |
+| Booleans | Question form | `isActive`, `hasPermission` |
+| Constants | SCREAMING_SNAKE | `MAX_RETRY_COUNT` |
 
----
-
-## TIER 0: UNIVERSAL RULES (Always Active)
-
-### 🌐 Language Handling
-
-When user's prompt is NOT in English:
-1. **Internally translate** for better comprehension
-2. **Respond in user's language** - match their communication
-3. **Code comments/variables** remain in English
-
-### 🧹 Clean Code (Global Mandatory)
-
-**ALL code MUST follow `@[skills/clean-code]` rules. No exceptions.**
-
-- Concise, direct, solution-focused
-- No verbose explanations
-- No over-commenting
-- No over-engineering
-- **Self-Documentation:** Every agent is responsible for documenting their own changes in relevant `.md` files.
-- **Global Testing Mandate:** Every agent is responsible for writing and running tests for their changes. Follow the "Testing Pyramid" (Unit > Integration > E2E) and the "AAA Pattern" (Arrange, Act, Assert).
-- **Global Performance Mandate:** "Measure first, optimize second." Every agent must ensure their changes adhere to 2025 performance standards (Core Web Vitals for Web, query optimization for DB, bundle limits for FS).
-- **Infrastructure & Safety Mandate:** Every agent is responsible for the deployability and operational safety of their changes. Follow the "5-Phase Deployment Process" (Prepare, Backup, Deploy, Verify, Confirm/Rollback). Always verify environment variables and secrets security.
-
-### 📁 File Dependency Awareness
-
-**Before modifying ANY file:**
-1. Check `CODEBASE.md` → File Dependencies
-2. Identify dependent files
-3. Update ALL affected files together
-
-### 🗺️ System Map Read
-
-> 🔴 **MANDATORY:** Read `ARCHITECTURE.md` at session start to understand Agents, Skills, and Scripts.
-
-**Path Awareness:**
-- Agents: `.github/` (Project)
-- Skills: `.github/prompts/` (Project)
-- Runtime Scripts: `.github/prompts/<skill>/scripts/`
-
-
-### 🧠 Read → Understand → Apply
-
-```
-❌ WRONG: Read agent file → Start coding
-✅ CORRECT: Read → Understand WHY → Apply PRINCIPLES → Code
-```
-
-**Before coding, answer:**
-1. What is the GOAL of this agent/skill?
-2. What PRINCIPLES must I apply?
-3. How does this DIFFER from generic output?
+### Function Rules
+- **Small**: Max 20 lines, ideally 5-10
+- **Few Arguments**: Max 3, prefer 0-2
+- **No Side Effects**: Don't mutate inputs unexpectedly
+- **One Level of Abstraction**: Per function
 
 ---
 
-## TIER 1: CODE RULES (When Writing Code)
+## ��� Language & Communication
 
-### 📱 Project Type Routing
-
-| Project Type | Primary Agent | Skills |
-|--------------|---------------|--------|
-| **MOBILE** (iOS, Android, RN, Flutter) | `mobile-developer` | mobile-design |
-| **WEB** (Next.js, React web) | `frontend-specialist` | frontend-design |
-| **BACKEND** (API, server, DB) | `backend-specialist` | api-patterns, database-design |
-
-> 🔴 **Mobile + frontend-specialist = WRONG.** Mobile = mobile-developer ONLY.
-
-### 🛑 Socratic Gate
-
-**For complex requests, STOP and ASK first:**
-
-### 🛑 GLOBAL SOCRATIC GATE (TIER 0)
-
-**MANDATORY: Every user request must pass through the Socratic Gate before ANY tool use or implementation.**
-
-| Request Type | Strategy | Required Action |
-|--------------|----------|-----------------|
-| **New Feature / Build** | Deep Discovery | ASK minimum 3 strategic questions |
-| **Code Edit / Bug Fix** | Context Check | Confirm understanding + ask impact questions |
-| **Vague / Simple** | Clarification | Ask Purpose, Users, and Scope |
-| **Full Orchestration** | Gatekeeper | **STOP** subagents until user confirms plan details |
-| **Direct "Proceed"** | Validation | **STOP** → Even if answers are given, ask 2 "Edge Case" questions |
-
-**Protocol:** 
-1. **Never Assume:** If even 1% is unclear, ASK.
-2. **Handle Spec-heavy Requests:** When user gives a list (Answers 1, 2, 3...), do NOT skip the gate. Instead, ask about **Trade-offs** or **Edge Cases** (e.g., "LocalStorage confirmed, but should we handle data clearing or versioning?") before starting.
-3. **Wait:** Do NOT invoke subagents or write code until the user clears the Gate.
-4. **Reference:** Full protocol in `@[skills/brainstorming]`.
-
-### 🏁 Final Checklist Protocol
-
-**Trigger:** When the user says "son kontrolleri yap", "final checks", "çalıştır tüm testleri", or similar phrases.
-
-| Task Stage | Command | Purpose |
-|------------|---------|---------|
-| **Manual Audit** | `python scripts/checklist.py .` | Priority-based project audit |
-| **Pre-Deploy** | `python scripts/checklist.py . --url <URL>` | Full Suite + Performance + E2E |
-
-**Priority Execution Order:**
-1. **Security** → 2. **Lint** → 3. **Schema** → 4. **Tests** → 5. **UX** → 6. **Seo** → 7. **Lighthouse/E2E**
-
-**Rules:**
-- **Completion:** A task is NOT finished until `checklist.py` returns success.
-- **Reporting:** If it fails, fix the **Critical** blockers first (Security/Lint).
-
-
-**Available Scripts (12 total):**
-| Script | Skill | When to Use |
-|--------|-------|-------------|
-| `security_scan.py` | vulnerability-scanner | Always on deploy |
-| `dependency_analyzer.py` | vulnerability-scanner | Weekly / Deploy |
-| `lint_runner.py` | lint-and-validate | Every code change |
-| `test_runner.py` | testing-patterns | After logic change |
-| `schema_validator.py` | database-design | After DB change |
-| `ux_audit.py` | frontend-design | After UI change |
-| `accessibility_checker.py` | frontend-design | After UI change |
-| `seo_checker.py` | seo-fundamentals | After page change |
-| `bundle_analyzer.py` | performance-profiling | Before deploy |
-| `mobile_audit.py` | mobile-design | After mobile change |
-| `lighthouse_audit.py` | performance-profiling | Before deploy |
-| `playwright_runner.py` | webapp-testing | Before deploy |
-
-> 🔴 **Agents & Skills can invoke ANY script** via `python .github/prompts/<skill>/scripts/<script>.py`
-
-### 🎭 copilot Mode Mapping
-
-| Mode | Agent | Behavior |
-|------|-------|----------|
-| **plan** | `project-planner` | 4-phase methodology. NO CODE before Phase 4. |
-| **ask** | - | Focus on understanding. Ask questions. |
-| **edit** | `orchestrator` | Execute. Check `{task-slug}.md` first. |
-
-**Plan Mode (4-Phase):**
-1. ANALYSIS → Research, questions
-2. PLANNING → `{task-slug}.md`, task breakdown
-3. SOLUTIONING → Architecture, design (NO CODE!)
-4. IMPLEMENTATION → Code + tests
-
-> 🔴 **Edit mode:** If multi-file or structural change → Offer to create `{task-slug}.md`. For single-file fixes → Proceed directly.
+- **Match user's language** in responses
+- **Code comments/variables** always in English
+- Be **concise, direct, solution-focused**
+- No verbose explanations or over-commenting
 
 ---
 
-## TIER 2: DESIGN RULES (Reference)
+## ��� Available Resources
 
-> **Design rules are in the specialist agents, NOT here.**
+### Custom Agents (Use @agent-name in chat)
+Located in `.github/agents/`:
 
-| Task | Read |
-|------|------|
-| Web UI/UX | `.github/frontend-specialist.md` |
-| Mobile UI/UX | `.github/mobile-developer.md` |
+| Agent | Use Case |
+|-------|----------|
+| @orchestrator | Multi-agent coordination, complex tasks |
+| @project-planner | Architecture, planning, roadmaps |
+| @frontend-specialist | React, Next.js, Vue, CSS, animations |
+| @backend-specialist | API, databases, server optimization |
+| @mobile-developer | React Native, Flutter, iOS, Android |
+| @security-auditor | Vulnerability scanning, penetration testing |
+| @debugger | Root cause analysis, bug fixing |
+| @test-engineer | Unit, integration, E2E testing |
 
-**These agents contain:**
-- Purple Ban (no violet/purple colors)
-- Template Ban (no standard layouts)
-- Anti-cliché rules
-- Deep Design Thinking protocol
+### Prompt Files (Use /prompt-name or attach)
+Located in `.github/prompts/`:
 
-> 🔴 **For design work:** Open and READ the agent file. Rules are there.
+| Prompt | Description |
+|--------|-------------|
+| clean-code | Code quality standards, SOLID principles |
+| react-patterns | React best practices, hooks, state management |
+| nextjs-best-practices | Next.js App Router, SSR, ISR |
+| api-patterns | REST, GraphQL, tRPC design patterns |
+| testing-patterns | Testing strategies, TDD workflow |
+| database-design | Schema design, indexing, migrations |
+
+### Instructions (Slash commands)
+Located in `.github/instructions/`:
+
+| Command | Action |
+|---------|--------|
+| /brainstorm | Explore options with Socratic questioning |
+| /create | Create new features or applications |
+| /debug | Systematic debugging with RCA |
+| /deploy | Deploy with safety checks |
+| /enhance | Improve existing code quality |
+| /plan | Create implementation plans |
+| /test | Generate and run tests |
+
+---
+
+## ��� Workflow Guidelines
+
+### For Complex Tasks
+1. **Clarify** - Ask questions if requirements are unclear
+2. **Plan** - Create a brief implementation plan
+3. **Implement** - Write clean, tested code
+4. **Verify** - Run tests, check for errors
+
+### For Simple Fixes
+- Proceed directly with the fix
+- Explain what was changed and why
+
+### For Design/UI Tasks
+- Reference frontend-specialist or mobile-developer agent
+- Follow accessibility guidelines
+- Use modern, clean design patterns
 
 ---
 
-## 📁 QUICK REFERENCE
+## ���️ Safety & Quality
 
-### Available Master Agents (8)
-
-| Agent | Domain & Focus |
-|-------|----------------|
-| `orchestrator` | Multi-agent coordination and synthesis |
-| `project-planner` | Discovery, Architecture, and Task Planning |
-| `security-auditor` | Master Cybersecurity (Audit + Pentest + Infra Hardening) |
-| `backend-specialist` | Backend Architect (API + Database + Server/Docker Deploy) |
-| `frontend-specialist` | Frontend & Growth (UI/UX + SEO + Edge/Static Deploy) |
-| `mobile-developer` | Mobile Specialist (Cross-platform + Mobile Performance)|
-| `debugger` | Systematic Root Cause Analysis & Bug Fixing |
-| `game-developer` | Specialized Game Logic & Assets & Performance |
-
-### Key Skills
-
-| Skill | Purpose |
-|-------|---------|
-| `clean-code` | Coding standards (GLOBAL) |
-| `brainstorming` | Socratic questioning |
-| `app-builder` | Full-stack orchestration |
-| `frontend-design` | Web UI patterns |
-| `mobile-design` | Mobile UI patterns |
-| `plan-writing` | {task-slug}.md format |
-| `threejs-mastery` | 2025 3D Web (R3F, WebGPU) |
-| `behavioral-modes` | Mode switching |
-
-### Script Locations
-
-| Script | Path |
-|--------|------|
-| Full verify | `scripts/verify_all.py` |
-| Security scan | `.github/prompts/vulnerability-scanner/scripts/security_scan.py` |
-| UX audit | `.github/prompts/frontend-design/scripts/ux_audit.py` |
-| Mobile audit | `.github/prompts/mobile-design/scripts/mobile_audit.py` |
-| Lighthouse | `.github/prompts/performance-profiling/scripts/lighthouse_audit.py` |
-| Playwright | `.github/prompts/webapp-testing/scripts/playwright_runner.py` |
+- Always validate user inputs
+- Use TypeScript types when applicable
+- Handle errors gracefully with try/catch
+- Write tests for critical functionality
+- Check for security vulnerabilities in dependencies
 
 ---
+
+## ��� Additional Documentation
+
+- See `ARCHITECTURE.md` for detailed system documentation
+- Check agent files in `.github/agents/` for specialized knowledge
+- Browse prompts in `.github/prompts/` for domain-specific patterns
