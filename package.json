@@ -1,24 +1,7 @@
 {
   "name": "@shtokov/copilot-kit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "AI Agent templates - Custom Agents, Prompt Files, and Instructions for enhanced GitHub Copilot assistance",
-  "bin": {
-    "copilot-kit": "bin/index.js"
-  },
-  "files": [
-    "bin/",
-    ".github/",
-    "README.md",
-    "LICENSE"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ivanshtokov/copilot-kit.git"
-  },
-  "homepage": "https://github.com/ivanshtokov/copilot-kit#readme",
-  "bugs": {
-    "url": "https://github.com/ivanshtokov/copilot-kit/issues"
-  },
   "keywords": [
     "copilot",
     "github-copilot",
@@ -31,8 +14,30 @@
     "ai-assistant",
     "code-generation"
   ],
-  "author": "shtokov",
+  "homepage": "https://github.com/ivanshtokov/copilot-kit#readme",
+  "bugs": {
+    "url": "https://github.com/ivanshtokov/copilot-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivanshtokov/copilot-kit.git"
+  },
   "license": "MIT",
+  "author": "shtokov",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": {
+    "copilot-kit": "bin/index.js"
+  },
+  "files": [
+    "bin/",
+    ".github/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "engines": {
     "node": ">=14.0.0"
   },
