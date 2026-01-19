@@ -1,8 +1,8 @@
 <div align="center">
 
-# ��� Copilot Kit
+# ��� Copilot Kit
 
-> **Version 3.3.0** — Native GitHub Copilot Configuration Kit
+> **Version 3.4.0** — Native GitHub Copilot Configuration Kit
 
 [![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -31,7 +31,7 @@ copilot-kit init
 
 <a name="-english"></a>
 
-## ������ English
+## ������ English
 
 ### What is Copilot Kit?
 
@@ -47,7 +47,7 @@ copilot-kit init
 | **Instructions** | 11 | Behavioral guidelines |
 | **VS Code Settings** | ✓ | Pre-configured settings |
 
-### ��� Custom Agents (16)
+### ��� Custom Agents (16)
 
 Use @agent-name in GitHub Copilot Chat:
 
@@ -70,7 +70,7 @@ Use @agent-name in GitHub Copilot Chat:
 | **@game-developer** | Unity, Unreal |
 | **@explorer-agent** | Codebase exploration |
 
-### ��� Prompt Files (10)
+### ��� Prompt Files (10)
 
 | Prompt | Description |
 |--------|-------------|
@@ -85,11 +85,11 @@ Use @agent-name in GitHub Copilot Chat:
 | /status | Check health |
 | /test | Generate tests |
 
-### ��� Instructions (11)
+### ��� Instructions (11)
 
 brainstorm, create, debug, deploy, enhance, orchestrate, plan, preview, status, test, ui-ux-pro-max
 
-### ��� Agent Skills (40)
+### ��� Agent Skills (40)
 
 Skills are domain-specific knowledge libraries:
 - **Development:** app-builder, architecture, react-patterns, typescript-expert
@@ -99,7 +99,7 @@ Skills are domain-specific knowledge libraries:
 - **Security:** vulnerability-scanner, red-team-tactics
 - **DevOps:** docker-expert, deployment-procedures
 
-### ��� CLI Commands
+### ��� CLI Commands
 
 ```bash
 copilot-kit init           # Initialize
@@ -112,7 +112,7 @@ copilot-kit --version      # Version
 
 <a name="-русский"></a>
 
-## ������ Русский
+## ������ Русский
 
 ### Что такое Copilot Kit?
 
@@ -126,7 +126,7 @@ copilot-kit --version      # Version
 - ✅ **11 Инструкций**
 - ✅ **Автонастройка VS Code**
 
-### ���️ CLI команды
+### ���️ CLI команды
 
 ```bash
 copilot-kit init           # Установить
@@ -134,7 +134,7 @@ copilot-kit init --force   # Перезаписать
 copilot-kit --version      # Версия
 ```
 
-### ��� Лицензия
+### ��� Лицензия
 
 MIT © [@IShtokov](https://t.me/IShtokov)
 
@@ -146,7 +146,7 @@ MIT © [@IShtokov](https://t.me/IShtokov)
 
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/shtokov)
 
-### ��� Contact / Контакт
+### ��� Contact / Контакт
 
 [![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?style=for-the-badge&logo=telegram)](https://t.me/IShtokov)
 
