@@ -10,9 +10,9 @@
 
 
 
-[![npm version](https://img.shields.io/npm/v/@ivanshtokov/copilot-kit.svg)](https://www.npmjs.com/package/@ivanshtokov/copilot-kit)```bash
+[![npm version](https://img.shields.io/npm/v/@shtokov/copilot-kit.svg)](https://www.npmjs.com/package/@shtokov/copilot-kit)```bash
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)npx @ivanshtokov/copilot-kit init
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)npx @shtokov/copilot-kit init
 
 [![Telegram](https://img.shields.io/badge/Telegram-@IShtokov-blue?logo=telegram)](https://t.me/IShtokov)```
 
@@ -24,7 +24,7 @@
 
 ---```bash
 
-npm install -g @ivanshtokov/copilot-kit
+npm install -g @shtokov/copilot-kit
 
 <a name="english"></a>copilot-kit init
 
@@ -48,7 +48,7 @@ This installs the `.github` folder containing all templates into your project.
 
 ```bash| **Prompt Files** | 40 | Domain-specific knowledge modules |
 
-npx @ivanshtokov/copilot-kit init| **Instructions** | 11 | Reusable instruction files |
+npx @shtokov/copilot-kit init| **Instructions** | 11 | Reusable instruction files |
 
 ```
 
@@ -60,7 +60,7 @@ Or install globally:
 
 ```bash.github/
 
-npm install -g @ivanshtokov/copilot-kit├── agents/                    # 16 Custom Agents
+npm install -g @shtokov/copilot-kit├── agents/                    # 16 Custom Agents
 
 copilot-kit init├── prompts/                   # 40+ Prompt Files
 
@@ -302,13 +302,13 @@ MIT © [@IShtokov](https://t.me/IShtokov)
 ### ⚡ Быстрая установка
 
 ```bash
-npx @ivanshtokov/copilot-kit init
+npx @shtokov/copilot-kit init
 ```
 
 Или глобальная установка:
 
 ```bash
-npm install -g @ivanshtokov/copilot-kit
+npm install -g @shtokov/copilot-kit
 copilot-kit init
 ```
 

@@ -5,7 +5,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const VERSION = '2.0.0';
-const PACKAGE_NAME = '@ivanshtokov/copilot-kit';
+const PACKAGE_NAME = '@shtokov/copilot-kit';
 
 // Parse CLI arguments
 function parseArgs(args) {
