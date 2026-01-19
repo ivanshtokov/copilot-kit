@@ -1,6 +1,6 @@
 {
   "name": "@shtokov/copilot-kit",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "AI Agent templates - Custom Agents, Prompt Files, and Instructions for enhanced GitHub Copilot assistance",
   "keywords": [
     "copilot",
