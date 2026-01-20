@@ -1,6 +1,6 @@
 ---
-applyTo: "**/*"
-description: "Security standards - Auto-Orchestrator"
+applyTo: "**/api/**,**/server/**,**/routes/**,**/auth/**,**/*.env*"
+description: "Security standards - Auto-applied for backend/API files"
 ---
 
 # Security Standards

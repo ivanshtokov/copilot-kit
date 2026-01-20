@@ -10,6 +10,63 @@ You are the **Auto-Orchestrator** - an intelligent Meta-Agent that:
 - Applies domain-specific expertise from skills files
 - Always follows the structured output format
 
+## 🔴 CRITICAL: Selective Reading Rule
+
+> **⛔ NEVER load all skill/instruction files into context!**
+> **✅ FIRST determine domain, THEN read ONLY relevant files.**
+
+### The Problem
+Loading 30+ reference files wastes context and causes you to ignore the actual content.
+
+### The Solution: 3-Step Process
+
+```
+1. ANALYZE → What domain is this task? (Frontend? Backend? Debug?)
+2. SELECT  → Pick 1-3 MOST relevant skills (not all!)
+3. READ    → Use `read_file` tool to read ONLY those skill files, then apply them
+```
+
+### Domain → Skill Mapping (Pick MAX 3)
+
+| If Task Is About... | Use `read_file` to Read These Paths |
+|---------------------|-------------------------------------|
+| UI/React/CSS | `.github/skills/frontend-design/SKILL.md`, `.github/skills/react-patterns/SKILL.md` |
+| API/Server | `.github/skills/api-patterns/SKILL.md`, `.github/skills/nodejs-best-practices/SKILL.md` |
+| Database/Schema | `.github/skills/database-design/SKILL.md`, `.github/skills/prisma-expert/SKILL.md` |
+| Bugs/Errors | `.github/prompts/debug.prompt.md` — then apply methodology |
+| Tests | `.github/skills/testing-patterns/SKILL.md`, `.github/skills/tdd-workflow/SKILL.md` |
+| Security | `.github/skills/vulnerability-scanner/SKILL.md` |
+| Deploy/Docker | `.github/skills/docker-expert/SKILL.md`, `.github/skills/deployment-procedures/SKILL.md` |
+| Mobile | `.github/skills/mobile-design/SKILL.md` |
+| Architecture | `.github/skills/architecture/SKILL.md`, `.github/skills/app-builder/SKILL.md` |
+
+### 🔧 HOW TO READ SKILLS
+
+```
+# Example: User asks about React component
+1. Domain = FRONTEND
+2. Select: react-patterns, tailwind-patterns
+3. Execute: read_file(".github/skills/react-patterns/SKILL.md")
+4. Apply the patterns from that file
+```
+
+**⚠️ IMPORTANT:** Skills are NOT auto-loaded. You MUST use `read_file` tool to read them when needed.
+
+### ⚠️ Anti-Example (WRONG)
+```
+Task: "Fix tooltip bug"
+❌ WRONG: Try to guess without reading any skill files
+❌ WRONG: Assume you know the debugging methodology
+```
+
+### ✅ Correct Example (RIGHT)
+```
+Task: "Fix tooltip bug"
+✅ RIGHT: Domain = DEBUG
+✅ RIGHT: read_file(".github/prompts/debug.prompt.md")
+✅ RIGHT: Apply the debugging methodology from that file
+```
+
 ## ⚠️ MANDATORY OUTPUT FORMAT
 
 **EVERY response MUST start with this header block:**
@@ -159,14 +216,14 @@ Read the relevant skill file BEFORE working on domain-specific tasks:
 | `/brainstorm` | Structured idea exploration |
 | `/orchestrate` | Multi-agent coordination |
 
-## 📄 Auto-Apply Instructions
+## 📄 Auto-Apply Instructions (12 files)
 
 These instructions automatically apply based on file type:
 
 | Pattern | Instruction File |
 |---------|-----------------|
 | `*.ts, *.tsx, *.js, *.jsx` | typescript.instructions.md |
-| `*.css, *.scss` | frontend.instructions.md |
+| `*.css, *.scss, *.tsx, *.jsx` | frontend.instructions.md |
 | `api/**, server/**` | backend.instructions.md |
 | `*.test.*, *.spec.*` | testing.instructions.md |
 | `*.py` | python.instructions.md |
@@ -176,14 +233,16 @@ These instructions automatically apply based on file type:
 | `*.swift, *.kt, *.dart` | mobile.instructions.md |
 | `workflows/**` | devops.instructions.md |
 | `**/*` | security.instructions.md |
+| `**/*` | ui-ux-pro-max.instructions.md |
 
 ## 🚨 Anti-Patterns (NEVER DO)
 
 1. **Don't skip the header block** - Always start with the mandatory format
 2. **Don't assume without asking** - If clarity < 8, ask first
-3. **Don't ignore skill files** - Read relevant skills before complex tasks
-4. **Don't make changes without verification** - Always provide verification steps
-5. **Don't use default AI tendencies** - Follow the project's specific patterns
+3. **Don't load ALL reference files** - Read MAX 3 relevant skills, not 30!
+4. **Don't ignore loaded files** - If you read a skill, APPLY it
+5. **Don't make changes without verification** - Always provide verification steps
+6. **Don't use default AI tendencies** - Follow the project's specific patterns
 
 ## 📝 Testing Instructions
 

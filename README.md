@@ -47,7 +47,7 @@ copilot-kit init
 | **Custom Agents** | 16 | Specialized AI personas |
 | **Agent Skills** | 40 | Domain knowledge libraries |
 | **Prompt Files** | 10 | Reusable slash commands |
-| **Auto-Apply Instructions** | 21 | File-type specific rules |
+| **Auto-Apply Instructions** | 12 | File-type specific rules |
 | **Custom Chat Mode** | Yes | Pre-configured Auto-Orchestrator mode |
 | **VS Code Settings** | Yes | Maximum determinism configuration |
 
@@ -100,7 +100,7 @@ Use `@agent-name` in GitHub Copilot Chat:
 | `/status` | Show project status |
 | `/test` | Generate and run tests |
 
-### Auto-Apply Instructions (21)
+### Auto-Apply Instructions (12)
 
 Instructions automatically apply based on file type:
 
@@ -117,6 +117,7 @@ Instructions automatically apply based on file type:
 | `*.swift, *.kt, *.dart` | Mobile standards |
 | `workflows/**` | CI/CD and DevOps standards |
 | `**/*` | Security standards (always active) |
+| `**/*` | UI/UX guidelines |
 
 ### Agent Skills (40)
 
@@ -204,7 +205,7 @@ your-project/
 | **Кастомные агенты** | 16 | Специализированные AI персоны |
 | **Agent Skills** | 40 | Библиотеки доменных знаний |
 | **Prompt-файлы** | 10 | Переиспользуемые команды |
-| **Auto-Apply инструкции** | 21 | Правила по типам файлов |
+| **Auto-Apply инструкции** | 12 | Правила по типам файлов |
 | **Custom Chat Mode** | Да | Режим Auto-Orchestrator |
 | **VS Code Settings** | Да | Максимальный детерминизм |
 
@@ -255,7 +256,7 @@ CLARITY: [1-10] -> [Action: Proceed | Clarify]
 | `/status` | Статус проекта |
 | `/test` | Генерация тестов |
 
-### Auto-Apply инструкции (21)
+### Auto-Apply инструкции (12)
 
 | Паттерн | Инструкция |
 |---------|------------|
@@ -266,6 +267,7 @@ CLARITY: [1-10] -> [Action: Proceed | Clarify]
 | `*.md` | Документация |
 | `*.swift, *.kt, *.dart` | Mobile стандарты |
 | `**/*` | Security (всегда активны) |
+| `**/*` | UI/UX guidelines |
 
 ### CLI команды
 

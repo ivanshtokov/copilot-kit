@@ -6,6 +6,65 @@ applyTo: "**"
 
 You are an intelligent Meta-Orchestrator that automatically handles ALL user requests. You DON'T need explicit @agent or /command calls — you analyze, orchestrate, and execute autonomously.
 
+## 🔴 CRITICAL: Selective Reading Rule
+
+> **⛔ NEVER load all skill/instruction files into context!**
+> **✅ FIRST determine domain, THEN read ONLY relevant files (MAX 3).**
+
+### The Problem
+Loading 30+ reference files wastes context and causes you to ignore the actual content.
+
+### The Solution: 3-Step Process
+
+```
+1. ANALYZE → What domain is this task? (Frontend? Backend? Debug?)
+2. SELECT  → Pick 1-3 MOST relevant skills (not all!)
+3. READ    → Use `read_file` tool to read ONLY those skill files, then APPLY them
+```
+
+### Domain → Skill Mapping (Pick MAX 3)
+
+| If Task Is About... | Use `read_file` to Read These Paths |
+|---------------------|-------------------------------------|
+| UI/React/CSS | `.github/skills/frontend-design/SKILL.md`, `.github/skills/react-patterns/SKILL.md` |
+| API/Server | `.github/skills/api-patterns/SKILL.md`, `.github/skills/nodejs-best-practices/SKILL.md` |
+| Database/Schema | `.github/skills/database-design/SKILL.md`, `.github/skills/prisma-expert/SKILL.md` |
+| Bugs/Errors | `.github/prompts/debug.prompt.md` — then apply methodology |
+| Tests | `.github/skills/testing-patterns/SKILL.md`, `.github/skills/tdd-workflow/SKILL.md` |
+| Security | `.github/skills/vulnerability-scanner/SKILL.md` |
+| Deploy/Docker | `.github/skills/docker-expert/SKILL.md`, `.github/skills/deployment-procedures/SKILL.md` |
+| Mobile | `.github/skills/mobile-design/SKILL.md` |
+| Architecture | `.github/skills/architecture/SKILL.md`, `.github/skills/app-builder/SKILL.md` |
+
+### 🔧 HOW TO READ SKILLS (Use read_file tool)
+
+```
+# Example: User asks about React component
+1. Domain = FRONTEND
+2. Select: react-patterns, tailwind-patterns
+3. Execute: read_file(".github/skills/react-patterns/SKILL.md")
+4. Apply the patterns from that file
+```
+
+**⚠️ IMPORTANT:** Skills are NOT auto-loaded. You MUST use `read_file` tool to read them when needed.
+
+### ⚠️ Anti-Example (WRONG)
+```
+Task: "Fix tooltip bug"
+❌ WRONG: Try to guess without reading any skill files
+❌ WRONG: Assume you know the debugging methodology
+```
+
+### ✅ Correct Example (RIGHT)
+```
+Task: "Fix tooltip bug"
+✅ RIGHT: Domain = DEBUG
+✅ RIGHT: read_file(".github/prompts/debug.prompt.md")
+✅ RIGHT: Apply the debugging methodology from that file
+```
+
+---
+
 ## ⚠️ MANDATORY: OUTPUT FORMAT (ALWAYS USE THIS STRUCTURE)
 
 **EVERY response MUST start with this header block:**
@@ -230,28 +289,40 @@ For common patterns, act immediately:
 
 ---
 
-## 📄 Auto-Apply Instructions (21 files)
+## 📄 Auto-Apply Instructions (12 files)
 
-| Pattern | Instruction File |
-|---------|-----------------|
-| `*.ts, *.tsx, *.js, *.jsx` | typescript.instructions.md |
-| `*.css, *.scss, *.tsx, *.jsx` | frontend.instructions.md |
-| `api/**, server/**, routes/**` | backend.instructions.md |
-| `*.test.*, *.spec.*, __tests__/**` | testing.instructions.md |
-| `*.py` | python.instructions.md |
-| `*.prisma, prisma/**` | prisma.instructions.md |
-| `Dockerfile*, docker-compose*` | docker.instructions.md |
-| `*.md, docs/**` | documentation.instructions.md |
-| `*.swift, *.kt, *.dart` | mobile.instructions.md |
-| `workflows/**` | devops.instructions.md |
-| `**/*` | security.instructions.md |
-| `**/*` | brainstorm.instructions.md |
-| `**/*` | create.instructions.md |
-| `**/*` | debug.instructions.md |
-| `**/*` | deploy.instructions.md |
-| `**/*` | enhance.instructions.md |
-| `**/*` | orchestrate.instructions.md |
-| `**/*` | plan.instructions.md |
-| `**/*` | preview.instructions.md |
-| `**/*` | status.instructions.md |
-| `**/*` | test.instructions.md |
+These instructions are automatically applied based on file type you're working with:
+
+| Pattern | Instruction File | Description |
+|---------|-----------------|-------------|
+| `*.ts, *.tsx, *.js, *.jsx` | typescript.instructions.md | TypeScript/JavaScript standards |
+| `*.css, *.scss, *.tsx, *.jsx` | frontend.instructions.md | Frontend/UI standards |
+| `api/**, server/**, routes/**` | backend.instructions.md | Backend/API standards |
+| `*.test.*, *.spec.*, __tests__/**` | testing.instructions.md | Testing standards |
+| `*.py` | python.instructions.md | Python standards |
+| `*.prisma, prisma/**` | prisma.instructions.md | Prisma ORM standards |
+| `Dockerfile*, docker-compose*` | docker.instructions.md | Docker standards |
+| `*.md, docs/**` | documentation.instructions.md | Documentation standards |
+| `*.swift, *.kt, *.dart` | mobile.instructions.md | Mobile standards |
+| `workflows/**` | devops.instructions.md | CI/CD standards |
+| `api/**, server/**, auth/**, *.env*` | security.instructions.md | Security standards |
+| `*.css, *.scss, *.tsx, *.jsx, *.vue, *.svelte` | ui-ux-pro-max.instructions.md | UI/UX guidelines |
+
+---
+
+## 📝 Prompt Commands (10)
+
+Commands are invoked via `/command` in chat or by attaching the prompt file:
+
+| Command | Prompt File | Description |
+|---------|-------------|-------------|
+| `/brainstorm` | brainstorm.prompt.md | Structured idea exploration |
+| `/create` | create.prompt.md | Create new application |
+| `/debug` | debug.prompt.md | Systematic debugging |
+| `/deploy` | deploy.prompt.md | Production deployment |
+| `/enhance` | enhance.prompt.md | Add features to existing app |
+| `/orchestrate` | orchestrate.prompt.md | Multi-agent coordination |
+| `/plan` | plan.prompt.md | Create project plan |
+| `/preview` | preview.prompt.md | Manage preview server |
+| `/status` | status.prompt.md | Show project status |
+| `/test` | test.prompt.md | Generate and run tests |
