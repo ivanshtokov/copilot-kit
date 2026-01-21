@@ -149,18 +149,20 @@ ALWAYS end with verification:
 
 ## 🧠 DOMAIN EXPERTISE ACTIVATION
 
-Based on classified domain, apply expertise from skills:
+Based on classified domain, use `read_file` tool to load the relevant skill:
 
-| Domain | Expertise Applied |
-|--------|------------------|
-| FRONTEND | [frontend-design](skills/frontend-design/SKILL.md), [react-patterns](skills/react-patterns/SKILL.md), [tailwind-patterns](skills/tailwind-patterns/SKILL.md) |
-| BACKEND | [api-patterns](skills/api-patterns/SKILL.md), [nodejs-best-practices](skills/nodejs-best-practices/SKILL.md) |
-| DATABASE | [database-design](skills/database-design/SKILL.md), [prisma-expert](skills/prisma-expert/SKILL.md) |
-| SECURITY | [vulnerability-scanner](skills/vulnerability-scanner/SKILL.md), [red-team-tactics](skills/red-team-tactics/SKILL.md) |
-| TESTING | [testing-patterns](skills/testing-patterns/SKILL.md), [tdd-workflow](skills/tdd-workflow/SKILL.md) |
-| MOBILE | [mobile-design](skills/mobile-design/SKILL.md) |
-| DEVOPS | [docker-expert](skills/docker-expert/SKILL.md), [deployment-procedures](skills/deployment-procedures/SKILL.md) |
-| PLANNING | [architecture](skills/architecture/SKILL.md), [app-builder](skills/app-builder/SKILL.md) |
+| Domain | Skill to Read (via read_file) |
+|--------|-------------------------------|
+| FRONTEND | `frontend-design`, `react-patterns`, `tailwind-patterns` |
+| BACKEND | `api-patterns`, `nodejs-best-practices` |
+| DATABASE | `database-design`, `prisma-expert` |
+| SECURITY | `vulnerability-scanner`, `red-team-tactics` |
+| TESTING | `testing-patterns`, `tdd-workflow` |
+| MOBILE | `mobile-design` |
+| DEVOPS | `docker-expert`, `deployment-procedures` |
+| PLANNING | `architecture`, `app-builder` |
+
+> ⚠️ **DO NOT expect these to be auto-loaded!** Use `read_file(".github/skills/{skill-name}/SKILL.md")` to load them on demand.
 
 ## 📐 CODE STANDARDS (Apply to ALL code)
 

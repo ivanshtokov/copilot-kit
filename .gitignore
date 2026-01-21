@@ -32,3 +32,4 @@ yarn-debug.log*
 # Testing methodology (local only)
 TEST-METHODOLOGY.md
 yarn-error.log*
+*.chatreplay.json
